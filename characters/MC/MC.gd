@@ -30,8 +30,8 @@ func _ready():
 	# Capture mouse for FPS camera control
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	print(get_tree().current_scene.name)
-	global_translation = Global.target_pos
-	rotation_degrees.y = Global.target_rot.y
+#	global_translation = Global.target_pos
+#	rotation_degrees.y = Global.target_rot.y
 
 func _input(event):
 	# Handle mouse look

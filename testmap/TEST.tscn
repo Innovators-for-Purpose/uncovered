@@ -62,3 +62,18 @@ omni_range = 56.0756
 
 [node name="Spatial" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12.6621 )
+
+[node name="GUI" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="GUI"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 784.0
+margin_top = 474.0
+margin_right = 963.0
+margin_bottom = 488.0
+text = "Press T to kick next to a box"
