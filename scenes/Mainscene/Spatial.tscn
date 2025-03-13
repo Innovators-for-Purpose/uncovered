@@ -2,6 +2,7 @@
 
 [ext_resource path="res://characters/Mentor/Mentor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Door.new/Door-new.glb" type="PackedScene" id=2]
+[ext_resource path="res://workspaces/atrium-test.glb" type="PackedScene" id=3]
 [ext_resource path="res://scenes/transitionobjects/transitionobject/Transition_Object.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Components/Office/mainscenes/office-3.tscn" type="PackedScene" id=5]
 [ext_resource path="res://characters/GC/GC.tscn" type="PackedScene" id=6]
@@ -15,7 +16,6 @@
 [ext_resource path="res://scenes/transitionobjects/transitionobject/Transition_Object2.gd" type="Script" id=18]
 [ext_resource path="res://Components/Hallway/Classroom_HALLWAY.tscn" type="PackedScene" id=19]
 [ext_resource path="res://scenes/transitionobjects/transitionobject/Transition_Object3.gd" type="Script" id=21]
-[ext_resource path="res://Components/atrium/Atrium.tscn" type="PackedScene" id=22]
 [ext_resource path="res://assets/objectsall/Large objects/whiteboards/Whiteboard.fbx" type="PackedScene" id=23]
 [ext_resource path="res://assets/objectsall/Large objects/Door/Hallway Door.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Components/Classroom L1/classroom_teacher_Desk.fbx" type="PackedScene" id=25]
@@ -153,7 +153,7 @@ script = ExtResource( 28 )
 [node name="BossBattleTimer" type="Timer" parent="MCSRevengeTransport"]
 
 [node name="CSGSphere" type="CSGSphere" parent="MCSRevengeTransport"]
-transform = Transform( 1.40378, 0, 0, 0, 3.30962, 0, 0, 0, 2.71476, -39.4922, -8.91187, 29.4487 )
+transform = Transform( 1.40378, 0, 0, 0, 3.30962, 0, 0, 0, 2.71476, -39.4922, -8.91188, 37.2098 )
 
 [node name="Area" type="Area" parent="MCSRevengeTransport/CSGSphere"]
 
@@ -204,7 +204,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5868, 6.90973, -40.1345 )
 transform = Transform( 0.998921, 0.00336558, -0.0463115, -0.0034327, 0.999993, -0.00136941, 0.0463066, 0.00152693, 0.998926, -17.3227, 6.20063, -34.0485 )
 
 [node name="office-3" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1.37612, 0, 0, 0, 1.00371, 0, 0, 0, 1.35421, -42.1194, 7.60737, -20.8393 )
+transform = Transform( 1.37612, 0, 0, 0, 1.00371, 0, 0, 0, 1.35421, -43.1011, 7.60737, -20.0189 )
 
 [node name="Basement_Door2" parent="." instance=ExtResource( 33 )]
 transform = Transform( -1, 0, -1.58187e-07, 0, 1.41482, 0, 1.50996e-07, 0, -1.04763, -28.9453, 1.40871, -29.7088 )
@@ -236,22 +236,19 @@ script = ExtResource( 21 )
 [node name="Whiteboard" parent="." instance=ExtResource( 23 )]
 transform = Transform( 0.999963, 0, 0.00863927, 0, 1, 0, -0.00863927, 0, 0.999963, -17.416, 7.99107, -31.8914 )
 
-[node name="Atrium" parent="." instance=ExtResource( 22 )]
-transform = Transform( 1.42934, 0, 0, 0, 1, 0, 0, 0, 1.40018, -25.324, 6.47473, -19.7845 )
-__meta__ = {
-"_editor_description_": ""
-}
-
 [node name="Text" parent="." instance=ExtResource( 27 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.7721, 5.98089, -13.6491 )
 
+[node name="atrium-test" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1.40792, 0, 0, 0, 1.08193, 0, 0, 0, 1.3744, -25.5579, 5.58104, -56.3633 )
+
 [node name="atrium_dead_end" parent="." instance=ExtResource( 26 )]
-transform = Transform( 1.42428, 0, 0, 0, 0.960988, 0, 0, 0, 2.5481, -1.08552, 7.52099, -20.8106 )
+transform = Transform( 1.42428, 0, 0, 0, 0.960988, 0, 0, 0, 2.5481, -1.08552, 7.52099, -19.8881 )
 
 [node name="Welcome" parent="." instance=ExtResource( 30 )]
 
 [node name="hallwayhopeful" parent="." instance=ExtResource( 32 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.396, 5.26514, -53.0685 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5536, 5.40637, -52.2827 )
 __meta__ = {
 "_editor_description_": ""
 }
@@ -263,7 +260,7 @@ transform = Transform( -1, 0, -1.58187e-07, 0, 1.42076, 0, 1.50996e-07, 0, -1.04
 transform = Transform( 1.16249, 0, 0, 0, 1.38602, 0, 0, 0, 1.03559, -33.3841, 0.470384, -18.8539 )
 
 [node name="Basement_Door3" parent="." instance=ExtResource( 33 )]
-transform = Transform( -0.430264, 0, -1.7951e-07, 0, 1.26893, 0, 6.49681e-08, 0, -1.18884, -37.7212, 6.30637, -19.8202 )
+transform = Transform( -0.430264, 0, -1.7951e-07, 0, 1.26893, 0, 6.49681e-08, 0, -1.18884, -38.2422, 6.3118, -19.0628 )
 __meta__ = {
 "_editor_description_": ""
 }
