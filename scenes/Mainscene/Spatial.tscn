@@ -2,6 +2,7 @@
 
 [ext_resource path="res://characters/Mentor/Mentor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Door.new/Door-new.glb" type="PackedScene" id=2]
+[ext_resource path="res://adnan/untitled folder/Newhallway1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/transitionobjects/transitionobject/Transition_Object.tscn" type="PackedScene" id=4]
 [ext_resource path="res://characters/GC/GC.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/objectsall/Large objects/chairsdesks/classroom_chairs_and_Desks.fbx" type="PackedScene" id=8]
@@ -24,7 +25,6 @@
 [ext_resource path="res://Components/Hallway/assets/Hallway_Door.tscn" type="PackedScene" id=29]
 [ext_resource path="res://Components/Welcome/Welcome.tscn" type="PackedScene" id=30]
 [ext_resource path="res://Components/Office/OFFICE.tscn" type="PackedScene" id=31]
-[ext_resource path="res://dev_sabrina/hallnimation/hallwayhopeful1.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Components/basement/Basement_Door.tscn" type="PackedScene" id=33]
 [ext_resource path="res://basement2/basement2.glb" type="PackedScene" id=34]
 [ext_resource path="res://BASEMENT_DOOR/BASEMENT_DOOR.glb" type="PackedScene" id=35]
@@ -114,7 +114,7 @@ transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -44.4, 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.06532, -22.7066, 6.612, -43.6508 )
 
 [node name="Hallway_Door" parent="Door1" instance=ExtResource( 29 )]
-transform = Transform( 0.430264, 0, 0, 0, 1, 0, 0, 0, 1.05, 0.200001, 0.524379, 2.08658 )
+transform = Transform( 0.430264, 0, 0, 0, 1, 0, 0, 0, 1.05, 25.0075, 0.524379, 2.08658 )
 
 [node name="DialoguePlayer" parent="Door1/Hallway_Door" instance=ExtResource( 17 )]
 follow_viewport_enable = true
@@ -127,6 +127,7 @@ anims/open = SubResource( 2 )
 [node name="Area" type="Area" parent="Door1"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Door1/Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8075, 0, 0 )
 shape = SubResource( 9 )
 
 [node name="Door2" type="Spatial" parent="."]
@@ -137,13 +138,13 @@ anims/RESET = SubResource( 3 )
 anims/open = SubResource( 4 )
 
 [node name="Classroom_HALLWAY_door" parent="Door2" instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0191231, 0.414001, 1.82787 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8266, 0.414001, 1.82787 )
 
 [node name="Door3" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6063, 6.612, -66.8241 )
 
 [node name="Classroom_HALLWAY_door" parent="Door3" instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.05266, 0.0496426, 0.414001, 4.50496 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.05266, 24.8572, 0.414001, 4.50496 )
 
 [node name="MCSRevengeTransport" type="Spatial" parent="."]
 transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -32.6436, 7.72239, -24.4908 )
@@ -164,11 +165,11 @@ shape = SubResource( 8 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.98928 )
 
 [node name="Knob1" parent="." instance=ExtResource( 4 )]
-transform = Transform( -8.85853e-09, 0, -0.103299, 0, 0.192188, 0, 0.20266, 0, -4.51534e-09, -22.4892, 7.13856, -41.4476 )
+transform = Transform( -8.85853e-09, 0, -0.103299, 0, 0.192188, 0, 0.20266, 0, -4.51534e-09, 2.31831, 7.13856, -41.4476 )
 script = ExtResource( 18 )
 
 [node name="Knob3" parent="." instance=ExtResource( 4 )]
-transform = Transform( -5.61359e-09, 0, -0.103299, 0, 0.138535, 0, 0.118936, 0, -4.18175e-09, -22.5651, 7.01692, -62.3091 )
+transform = Transform( -5.61359e-09, 0, -0.103299, 0, 0.138535, 0, 0.118936, 0, -4.18175e-09, 2.24241, 7.01692, -62.3091 )
 script = ExtResource( 21 )
 
 [node name="Timer" type="Timer" parent="."]
@@ -180,7 +181,7 @@ transform = Transform( 1, 0, 0, 0, 0.021, 0, 0, 0, 0.691089, -24.7082, 4.99893, 
 transform = Transform( 112.455, 0, -4.37114e-06, 0, -0.472, 0, 9.83113e-06, 0, 50, 10, 15, 0.0290012 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Floor"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1759, 19.3038, 30.1192 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1284, 19.3038, 22.3537 )
 shape = SubResource( 7 )
 
 [node name="Plane" type="MeshInstance" parent="Floor"]
@@ -196,6 +197,7 @@ multimesh = SubResource( 13 )
 
 [node name="Classroom" parent="." instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0215, 6.65417, -38.3343 )
+visible = false
 
 [node name="classroom_chairs_and_Desks" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5868, 6.90973, -40.1345 )
@@ -215,7 +217,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
 transform = Transform( 1, 0, 0, 0, 1.41956, 0, 0, 0, 1, -25.2079, 12.5167, 15.9889 )
 
 [node name="Mentor" parent="Node2D/Enviroment" instance=ExtResource( 1 )]
-transform = Transform( 0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.5, -25.3264, 12.968, 10 )
+transform = Transform( 0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.5, -25.7524, 12.968, -7.74105 )
 
 [node name="GC" parent="Node2D/Enviroment" instance=ExtResource( 6 )]
 transform = Transform( -0.051259, 0, 0.49708, 0, 0.475, 0, -0.472226, 0, -0.0539565, -41.2675, 13.2545, -9.54538 )
@@ -241,17 +243,11 @@ transform = Transform( 1.42428, 0, 0, 0, 0.960988, 0, 0, 0, 1.86308, -4.5202, 7.
 
 [node name="Welcome" parent="." instance=ExtResource( 30 )]
 
-[node name="hallwayhopeful" parent="." instance=ExtResource( 32 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5536, 5.40637, -52.2827 )
-__meta__ = {
-"_editor_description_": ""
-}
-
 [node name="Basement_Door" parent="." instance=ExtResource( 33 )]
 transform = Transform( -1, 0, -1.58187e-07, 0, 1.42076, 0, 1.50996e-07, 0, -1.04763, -28.8578, 1.41948, -5.21096 )
 
 [node name="OFFICE" parent="." instance=ExtResource( 31 )]
-transform = Transform( 1.16249, 0, 0, 0, 1.38602, 0, 0, 0, 1.03559, -33.3841, 0.470384, -18.8539 )
+transform = Transform( 1.16249, 0, 0, 0, 1.38602, 0, 0, 0, 1.03559, -33.5304, 0.470384, -18.8035 )
 
 [node name="Basement_Door3" parent="." instance=ExtResource( 33 )]
 transform = Transform( -0.430264, 0, -1.7951e-07, 0, 1.26893, 0, 6.49681e-08, 0, -1.18884, -39.2422, 6.3118, -41.8054 )
@@ -275,10 +271,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 5, -54 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 4 )
 
 [node name="Zach" parent="." instance=ExtResource( 12 )]
-transform = Transform( -0.17, 0, 2.56693e-08, 0, 0.17, 0, -2.56693e-08, 0, -0.17, -22.451, 6.21891, -31.982 )
+transform = Transform( -0.116193, 0, -0.124093, 0, 0.17, 0, 0.124093, 0, -0.116193, -23.5907, 6.21891, -12.1342 )
 
 [node name="Newatriumoffice" parent="." instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.4352, 5.7898, -48.6111 )
+
+[node name="Newhallway1" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.3623, 5.61901, -48.4874 )
 
 [connection signal="body_entered" from="Door1/Hallway_Door" to="Knob1" method="_on_Hallway_Door_body_entered"]
 [connection signal="ready" from="Door1/Hallway_Door/DialoguePlayer" to="Door1/Hallway_Door/DialoguePlayer" method="_on_Dialogueplayer_ready"]

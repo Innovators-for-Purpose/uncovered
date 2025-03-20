@@ -44,7 +44,6 @@
 [ext_resource path="res://adnan/untitled folder/Camera.gd" type="Script" id=42]
 [ext_resource path="res://adnan/untitled folder/AnimationPlayer.gd" type="Script" id=43]
 
-
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "hallwayhopeful_Cube003"
 surfaces/0 = {
