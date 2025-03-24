@@ -276,7 +276,7 @@ transform = Transform( -0.116193, 0, -0.124093, 0, 0.17, 0, 0.124093, 0, -0.1161
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.4352, 5.7898, -48.6111 )
 
 [node name="Newhallway1" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.9839, 5.62331, -42.6436 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.3064, 5.62331, -48.6433 )
 
 [connection signal="body_entered" from="Door1/Hallway_Door" to="Knob1" method="_on_Hallway_Door_body_entered"]
 [connection signal="ready" from="Door1/Hallway_Door/DialoguePlayer" to="Door1/Hallway_Door/DialoguePlayer" method="_on_Dialogueplayer_ready"]
