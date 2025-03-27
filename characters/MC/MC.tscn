@@ -9,6 +9,7 @@ radius = 0.99416
 height = 1.83842
 
 [node name="MC" type="KinematicBody" groups=["player"]]
+transform = Transform( 1, 0, 0, 0, 0.848505, 0, 0, 0, 1, 0, 0, 0 )
 script = ExtResource( 1 )
 friction = 0.8
 
