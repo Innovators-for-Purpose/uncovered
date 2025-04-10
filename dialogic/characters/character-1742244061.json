@@ -1,0 +1,21 @@
+{
+	"color": "#ffffffff",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1742244061.json",
+	"mirror_portraits": false,
+	"name": "Headmaster Judy",
+	"nickname": "judy",
+	"nickname_bool": true,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://characters/Judy Grant/Judy.png"
+		}
+	],
+	"scale": 25,
+	"theme": ""
+}

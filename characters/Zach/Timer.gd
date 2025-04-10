@@ -11,7 +11,7 @@ func _on_Area_body_entered(body):
 		start()
 		if Input.is_action_just_pressed("game_usage") and currently_colliding == true:
 			count = count+1
-		elif Input.is_action_just_pressed("game_usageI"):
+		elif Input.is_action_just_pressed("game_usage"):
 			count = 18
 
 var count = 1

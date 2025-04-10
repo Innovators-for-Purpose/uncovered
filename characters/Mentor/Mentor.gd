@@ -48,3 +48,6 @@ func _physics_process(_delta):
 		else:
 			velocity = velocity.normalized() * speed
 	transform.origin += velocity
+
+
+
