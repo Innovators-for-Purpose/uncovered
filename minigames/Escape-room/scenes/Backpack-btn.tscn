@@ -45,7 +45,7 @@ tracks/2/keys = {
 offsets = PoolRealArray( 0, 0.444954, 1 )
 colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0.92549, 1, 1, 1, 0 )
 
-[node name="TextureButton" type="TextureButton"]
+[node name="Inv" type="TextureButton"]
 rect_scale = Vector2( 0.472, 0.472 )
 rect_pivot_offset = Vector2( 175, 181 )
 toggle_mode = true
