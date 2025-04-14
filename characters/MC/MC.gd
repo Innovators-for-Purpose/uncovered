@@ -8,7 +8,7 @@ var count = 0
 var check = 1
 export(bool) var immobile
 export var target_pos = Vector3(0,0,0)
-
+var dialog_count= 1
 # Start
 # Movement variables
 export var speed = 7.0
@@ -86,7 +86,8 @@ func _physics_process(delta):
 	velocity.z = horizontal_velocity.z
 	
 	# Move the character
-	velocity = move_and_slide(velocity, Vector3.UP, false, 4, PI/4, false)
+	if (!immobile):
+		velocity = move_and_slide(velocity, Vector3.UP, false, 4, PI/4, false)
 	
 	for index in get_slide_count():
 		var collision = get_slide_collision(index)
@@ -140,6 +141,16 @@ func do_teleport(area):
 					area.lock_self()
 					global_translation.x = portal.global_translation.x
 					global_translation.z = portal.global_translation.z
+
+
+
+
+
+
+
+
+
+
 
 
 

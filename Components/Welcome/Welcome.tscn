@@ -97,6 +97,7 @@ margin_bottom = 217.0
 [node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel"]
 margin_right = 884.0
 margin_bottom = 174.0
+rect_rotation = -0.0709854
 texture = ExtResource( 8 )
 region_rect = Rect2( -1027.25, 0, 4533.08, 1378.64 )
 

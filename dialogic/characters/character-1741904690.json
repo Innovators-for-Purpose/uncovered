@@ -1,0 +1,21 @@
+{
+	"color": "#ffffffff",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1741904690.json",
+	"mirror_portraits": true,
+	"name": "Zach",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://characters/Zach/zack.png"
+		}
+	],
+	"scale": 25,
+	"theme": "theme-1741904744.cfg"
+}

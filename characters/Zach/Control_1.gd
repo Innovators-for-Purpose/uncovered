@@ -25,7 +25,7 @@ func toggle_the_player(on):
 
 func _on_Area_body_entered(body):
 	if body.name == "MC":
-		body.immobile = false
+		# body.immobile = false
 		currently_colliding = true
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
@@ -44,7 +44,7 @@ func _physics_process(_delta):
 		active_dialogue = 18
 
 	elif active_dialogue == 0 and currently_colliding == true:
-		visible = true 
+		visible = false 
 
 
 
@@ -78,7 +78,7 @@ func _physics_process(_delta):
 		NQx.show()
 		Px.show()
 		IDx.show()
-
+#
 	if active_dialogue == 4:
 		Lx.text = "I don't think there is a bright side…"
 		NQx.text = "you"

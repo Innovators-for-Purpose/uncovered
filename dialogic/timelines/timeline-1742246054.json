@@ -1,0 +1,67 @@
+{
+	"events": [
+		{
+			"background": "res://Components/Hallway/Hallway_2.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"animation": "slide_in_right.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1741904690.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "it's so boring here"
+		},
+		{
+			"character": "character-1741904690.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "you've been saying that all moring since i came over to your house and woke you up"
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "even so school is not for me "
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "im toooo old for this "
+		},
+		{
+			"character": "character-1741904690.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "stop complaning and let me give you a tour of the school"
+		},
+		{
+			"emit_signal": "end_timeline 1",
+			"event_id": "dialogic_040"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1742246054.json",
+		"name": "welcome to the school"
+	}
+}

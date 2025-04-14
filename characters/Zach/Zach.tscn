@@ -2,13 +2,14 @@
 
 [ext_resource path="res://characters/Zach/Zach.gd" type="Script" id=1]
 [ext_resource path="res://characters/Zach/Control_1.gd" type="Script" id=2]
-[ext_resource path="res://characters/Zach/zackh_002.png" type="Texture" id=3]
+[ext_resource path="res://characters/Zach/zack.png" type="Texture" id=3]
 [ext_resource path="res://Components/Hallway/Hallway_2.png" type="Texture" id=4]
 [ext_resource path="res://Image file/textdesign-04.png" type="Texture" id=5]
 [ext_resource path="res://Image file/textdesign-05.png" type="Texture" id=6]
 [ext_resource path="res://characters/Zach/Timer.gd" type="Script" id=7]
 [ext_resource path="res://assets/fonts/battlenet/new_dynamicfont.tres" type="DynamicFont" id=8]
 [ext_resource path="res://characters/Zach/Zach3Dmodel.glb" type="PackedScene" id=9]
+[ext_resource path="res://characters/Zach/hallway_dialog.gd" type="Script" id=10]
 
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 1, 2.66197, 1 )
@@ -33,12 +34,13 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Area" type="Area" parent="."]
+[node name="zach_Area" type="Area" parent="."]
 transform = Transform( 1.81747, 0, 0, 0, 4.071, 0, 0, 0, 1, 4.60523, 0, 0 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Area"]
+[node name="CollisionShape" type="CollisionShape" parent="zach_Area"]
 transform = Transform( 15, 0, 0, 0, 3, 0, 0, 0, 5, 0, 0, 0 )
 shape = SubResource( 2 )
+script = ExtResource( 10 )
 __meta__ = {
 "_editor_description_": "														"
 }
@@ -68,11 +70,12 @@ __meta__ = {
 }
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Zach/Panel"]
-margin_left = 570.0
-margin_top = -344.0
-margin_right = 910.0
-margin_bottom = -1.00003
-rect_scale = Vector2( 1.16993, 2.2377 )
+margin_left = 965.0
+margin_top = -400.0
+margin_right = 1175.0
+margin_bottom = -150.0
+rect_rotation = 0.0639361
+rect_scale = Vector2( -1.17, 2.238 )
 texture = ExtResource( 3 )
 __meta__ = {
 "_editor_description_": ""
@@ -202,15 +205,13 @@ __meta__ = {
 [node name="Zach3Dmodel" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.375606, -0.775429, -1.59079 )
-shape = SubResource( 6 )
-
-[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
-[connection signal="body_entered" from="Area" to="Zach" method="_on_Area_body_entered"]
-[connection signal="body_entered" from="Area" to="Timer" method="_on_Area_body_entered"]
-[connection signal="body_exited" from="Area" to="Zach" method="_on_Area_body_exited"]
-[connection signal="body_exited" from="Area" to="Timer" method="_on_Area_body_exited"]
+[connection signal="body_entered" from="zach_Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_entered" from="zach_Area" to="zach_Area/CollisionShape" method="_on_zach_Area_body_entered"]
+[connection signal="body_entered" from="zach_Area" to="Zach" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="zach_Area" to="Timer" method="_on_Area_body_entered"]
+[connection signal="body_exited" from="zach_Area" to="zach_Area/CollisionShape" method="_on_zach_Area_body_exited"]
+[connection signal="body_exited" from="zach_Area" to="Zach" method="_on_Area_body_exited"]
+[connection signal="body_exited" from="zach_Area" to="Timer" method="_on_Area_body_exited"]
 [connection signal="pressed" from="Zach/Panel/Button/Button" to="Zach" method="_on_Button_pressed"]
 [connection signal="pressed" from="Zach/Panel/Button/Button" to="Timer" method="_on_Button_pressed"]
 [connection signal="pressed" from="Zach/Panel/Button2/Button2" to="Zach" method="_on_Button2_pressed"]

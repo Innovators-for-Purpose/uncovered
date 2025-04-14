@@ -1,0 +1,105 @@
+{
+	"events": [
+		{
+			"background": "res://Components/Hallway/Hallway_2.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"animation": "slide_in_right.gd",
+			"animation_length": 0.5,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1741904690.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1741904690.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "so how do like this amazing school"
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"I look down the hallway lights flickering and water driping from the roof\""
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "yeah very \"AMAZING\" "
+		},
+		{
+			"character": "character-1741904690.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "well it least the floor isn't falling under us\nand i got to get to class now see you"
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "wait the tou...."
+		},
+		{
+			"animation": "slide_out_left.gd",
+			"animation_length": 0.5,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1741904690.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 1.5
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "guess i have to find my class by myself"
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 1
+		},
+		{
+			"emit_signal": "end_timeline",
+			"event_id": "dialogic_040"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1742509015.json",
+		"name": "hallway"
+	}
+}

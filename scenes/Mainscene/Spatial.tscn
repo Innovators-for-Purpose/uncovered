@@ -115,10 +115,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.06532, -22.7066, 6.612, -43.650
 [node name="Hallway_Door" parent="Door1" instance=ExtResource( 29 )]
 transform = Transform( 0.430264, 0, 0, 0, 1, 0, 0, 0, 1.05, 25.0075, 0.524379, 2.08658 )
 
-[node name="DialoguePlayer" parent="Door1/Hallway_Door" instance=ExtResource( 17 )]
-follow_viewport_enable = true
-dialogue_file = "res://scenes/Charater scenes/Student/jsons/Door tutorial.json"
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Door1"]
 anims/RESET = SubResource( 1 )
 anims/open = SubResource( 2 )
@@ -220,7 +216,7 @@ transform = Transform( 0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.5, -25.7524, 12.968, -7.7
 [node name="GC" parent="Node2D/Enviroment" instance=ExtResource( 6 )]
 transform = Transform( -0.051259, 0, 0.49708, 0, 0.475, 0, -0.472226, 0, -0.0539565, -41.2675, 13.2545, -9.54538 )
 
-[node name="Node2D@Enviroment@Laura@DialoguePlayer" parent="." instance=ExtResource( 17 )]
+[node name="Node2DEnviromentLauraDialoguePlayer" parent="." instance=ExtResource( 17 )]
 visible = false
 follow_viewport_enable = true
 dialogue_file = "res://scenes/Charater scenes/Laura/Laura/Laura.json"
@@ -275,7 +271,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.3064, 5.62331, -48.6433 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.3587, 5.80432, -48.1959 )
 
 [connection signal="body_entered" from="Door1/Hallway_Door" to="Knob1" method="_on_Hallway_Door_body_entered"]
-[connection signal="ready" from="Door1/Hallway_Door/DialoguePlayer" to="Door1/Hallway_Door/DialoguePlayer" method="_on_Dialogueplayer_ready"]
 [connection signal="timeout" from="MCSRevengeTransport/BossBattleTimer" to="MCSRevengeTransport" method="_on_Timer_timeout"]
 [connection signal="input_event" from="MCSRevengeTransport/CSGSphere/Area" to="MCSRevengeTransport" method="_on_Area_input_event"]
 [connection signal="timeout" from="Timer" to="Knob1" method="_on_Timer_timeout"]
