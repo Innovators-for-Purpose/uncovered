@@ -6,11 +6,14 @@ var talking = 1
 func _physics_process(delta):
 	if Input.is_action_pressed("kick"):
 		talking = 2
+		
 	else:
+		
 		talking = 1
 
 func _on_Area_body_entered(body):
-	if body.name == "MC":
+	
+	if body.name == "MC" and count == 1:
 		
 		get_node("/root/RootScene/Node2D/Enviroment/MC/CanvasLayer/Popup").visible = true
 	
@@ -18,7 +21,7 @@ func _on_Area_body_entered(body):
 #		run this if immobile code doesnt work
 #		var tempnode = get_node("/root/")
 #		print(tempnode)
-#		print(tempnode.get_children())
+#		  print(tempnode.get_children())
 #		var tempnode2 = get_node("/root/RootScene")
 #		print(tempnode2)
 #		print(tempnode2.get_children())

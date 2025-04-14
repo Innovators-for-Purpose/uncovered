@@ -8,9 +8,11 @@ func _physics_process(delta):
 		talking = 2
 	else:
 		talking = 1
+		
+		
 func _on_zach_Area_body_entered(body):
 	
-	if body.name == "MC":
+	if body.name == "MC" and count == 1:
 		get_node("/root/RootScene/Node2D/Enviroment/MC/CanvasLayer/Popup").visible = true
 	
 	

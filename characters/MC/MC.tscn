@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://characters/MC/MC.gd" type="Script" id=1]
 [ext_resource path="res://addons/dialogic/Other/DialogicClass.gd" type="Script" id=2]
 [ext_resource path="res://characters/MC/Popup.gd" type="Script" id=3]
+[ext_resource path="res://minigames/Escape-room/Escape-room_res/Txtrs/UI assets/inventorybackpackopen.png" type="Texture" id=4]
+[ext_resource path="res://characters/MC/Button.gd" type="Script" id=5]
 
 [sub_resource type="CapsuleMesh" id=2]
 
@@ -21,7 +23,7 @@ mesh = SubResource( 2 )
 skeleton = NodePath("")
 
 [node name="CameraPivot" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.114926, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.36422e-12, 1.36422e-12, 1.36422e-12 )
 
 [node name="Camera" type="Camera" parent="CameraPivot"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.705438, -0.386913 )
@@ -50,9 +52,28 @@ margin_bottom = 40.0
 script = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="CanvasLayer/Popup"]
-margin_right = 40.0
-margin_bottom = 14.0
+anchor_right = 1.0
+margin_left = 450.0
+margin_top = 250.0
+margin_right = 500.0
+margin_bottom = 264.0
 text = "Press T to talk"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+margin_left = -1.0
+margin_right = 114.0
+margin_bottom = 124.0
+toggle_mode = true
+icon = ExtResource( 4 )
+expand_icon = true
+script = ExtResource( 5 )
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Button"]
+margin_right = 40.0
+margin_bottom = 40.0
+columns = 9
 
 [connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
 [connection signal="child_entered_tree" from="Area/CollisionShape" to="." method="_on_CollisionShape_child_entered_tree"]
