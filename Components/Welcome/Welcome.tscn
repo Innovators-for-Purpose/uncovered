@@ -25,7 +25,6 @@ wait_time = 3.5
 autostart = true
 
 [node name="Node2D" type="Node2D" parent="."]
-visible = false
 
 [node name="Instructions" type="MarginContainer" parent="Node2D"]
 anchor_right = 1.0
@@ -80,6 +79,7 @@ and start over.
 (avoid walls though)"
 
 [node name="Control_1" type="Control" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 4 )
