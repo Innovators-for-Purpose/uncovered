@@ -18,7 +18,7 @@ func play():
 	if is_dialogue_active:
 		return
 	dialogue = load_dialogue()
-	# print(dialogues)
+#	print(dialogues)
 	if dialogue == null:
 		return
 	is_dialogue_active = true

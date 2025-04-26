@@ -16,7 +16,7 @@ func _ready():
 func _physics_process(delta):
 	if Input.is_action_just_pressed("Shoot"):
 		MC.translation = Vector3(-25.208,12.517,15.989)
-		pass # Replace with function body.
+		
 
 
 
