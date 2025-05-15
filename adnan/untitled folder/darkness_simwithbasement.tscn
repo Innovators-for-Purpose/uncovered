@@ -1,14 +1,44 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://adnan/untitled folder/darkness_simwithbasement.glb" type="PackedScene" id=1]
 [ext_resource path="res://adnan/untitled folder/Clicktorestart.gd" type="Script" id=2]
 [ext_resource path="res://adnan/untitled folder/Area.gd" type="Script" id=3]
 [ext_resource path="res://adnan/untitled folder/Clicktorestart.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/objectsall/Smaller Objects/electronics/Laptop.fbx" type="PackedScene" id=5]
+[ext_resource path="res://BASEMENT_DOOR/BASEMENT_DOOR.glb" type="PackedScene" id=6]
+[ext_resource path="res://minigames/Escape-room/scenes/schooldesk.glb" type="PackedScene" id=7]
+[ext_resource path="res://minigames/Escape-room/scenes/cabinet.glb" type="PackedScene" id=8]
+[ext_resource path="res://assets/objectsall/Large objects/bulletinboards/chalkboard.glb" type="PackedScene" id=9]
+[ext_resource path="res://assets/objectsall/Large objects/bulletinboards/newbasement.glb" type="PackedScene" id=10]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 9.64916, 1, 8.94949 )
 
 [node name="darkness_simwithbasement" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.132576, -0.0809479, -0.0610695 )
+
+[node name="darkness_simulator" parent="." index="0"]
+transform = Transform( 4.1621, 0, 0, 0, 4.1621, 0, 0, 0, 4.1621, -1.48636, -75.3931, -104.081 )
+visible = false
+
+[node name="Cube017" parent="." index="1"]
+transform = Transform( 3.57628e-07, 0, -1, 0, 1, 0, 1, 0, 3.57628e-07, -2.85513, -79.3931, -108.952 )
+visible = false
+
+[node name="CollisionShape" parent="Cube017/StaticBody" index="0"]
+transform = Transform( 1, 0, -1.13687e-13, 0, 1, 0, 1.42109e-13, 0, 1, -0.000221252, -0.170785, 0 )
+
+[node name="Material3001" parent="." index="2"]
+transform = Transform( 9.53675e-09, 0.04, 1.90735e-08, 0, -1.90735e-08, 0.04, 0.04, -9.53675e-09, 0, 5.48575, -12.3225, 12.3848 )
+visible = false
+
+[node name="defaultMaterial014" parent="." index="3"]
+transform = Transform( 0.845573, 0, 0, 0, 1, 0, 0, 0, 1.01887, -51.6391, -9.4369, 18.3702 )
+visible = false
+
+[node name="defaultMaterial007" parent="." index="4"]
+transform = Transform( -0.79625, 0, -9.03029e-07, 0, 1, 0, 5.56761e-07, 0, -1.29146, -51.6391, -9.4369, 16.3702 )
+visible = false
 
 [node name="Area" type="Area" parent="." index="5"]
 script = ExtResource( 3 )
@@ -19,5 +49,26 @@ shape = SubResource( 1 )
 
 [node name="Clicktorestart" parent="." index="6" instance=ExtResource( 4 )]
 script = ExtResource( 2 )
+
+[node name="schooldesk" parent="." index="7" instance=ExtResource( 7 )]
+transform = Transform( 1.06411, 0, -1.13503, 0, 1.2945, 0, 1.13503, 0, 1.06411, -11.7065, -12.3413, 0.325854 )
+
+[node name="cabinet" parent="." index="8" instance=ExtResource( 8 )]
+transform = Transform( 0.800537, 0, 0, 0, 0.493353, 0, 0, 0, 0.800537, -12.8347, -11.8336, 10.4217 )
+
+[node name="cabinet2" parent="." index="9" instance=ExtResource( 8 )]
+transform = Transform( 0.8, 0, 0, 0, 0.608107, 0, 0, 0, 0.8, -12.8275, -9.17378, 10.4614 )
+
+[node name="BASEMENT_DOOR" parent="." index="10" instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.17159, -12.3728, 17.6797 )
+
+[node name="Laptop" parent="." index="11" instance=ExtResource( 5 )]
+transform = Transform( 0.299804, 0, -3.08592, 0, 3.10044, 0, 3.08592, 0, 0.299804, -12.9579, -10.9254, 10.502 )
+
+[node name="chalkboard" parent="." index="12" instance=ExtResource( 9 )]
+transform = Transform( 0.855778, 0, 0, 0, 0.841681, 0, 0, 0, 1, -4.19889, -10.3017, -1.44677 )
+
+[node name="newbasement" parent="." index="13" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3173, -0.0543518, -0.153875 )
 
 [connection signal="body_entered" from="Area" to="Clicktorestart" method="_on_Area_body_entered"]
