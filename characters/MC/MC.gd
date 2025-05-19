@@ -141,6 +141,3 @@ func do_teleport(area):
 					global_translation.x = portal.global_translation.x
 					global_translation.z = portal.global_translation.z
 
-
-
-
