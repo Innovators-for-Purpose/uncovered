@@ -19,7 +19,7 @@ func _physics_process(delta):
 #		print(tempnode2.get_children())
 		count = 2
 		get_node("/root/RootScene/Node2D/Enviroment/MC").immobile = true
-		var dialog = Dialogic.start('hallway')
+		var dialog = Dialogic.start('welcome to the school')
 		dialog.connect("dialogic_signal", self, "dialog_listener")
 		add_child(dialog)
 
@@ -34,7 +34,7 @@ func _on_zach_Area_body_entered(body):
 
 func dialog_listener(string):
 	match string:
-		"end_timeline":
+		"end_timeline 1":
 			# do something
 			get_node("/root/RootScene/Node2D/Enviroment/MC").immobile = false
 			count = 2

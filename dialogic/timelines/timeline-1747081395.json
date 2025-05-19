@@ -1,0 +1,233 @@
+{
+	"events": [
+		{
+			"background": "res://scenes/oldscenes/images/A_black_image.jpg.png",
+			"event_id": "dialogic_021"
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 3
+		},
+		{
+			"background": "res://Components/Image_0.001.png",
+			"event_id": "dialogic_021",
+			"fade_duration": 3
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "what auuggghhh my head is killing me"
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "where the hell am i"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1742244059.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": true,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1742244059.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "the basement"
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "WAH-"
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"I stumble back frighten by the sudden appearance of a strange new person\""
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "who are yo-mff"
+		},
+		{
+			"character": "character-1742244059.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "shhh be quiet, don't you hear them"
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "..."
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "hear who"
+		},
+		{
+			"character": "character-1742244059.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "the \"voices\""
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"she's clearly insane\""
+		},
+		{
+			"character": "character-1742244059.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I've been hearing a lot of voices around the school lately…"
+		},
+		{
+			"character": "character-1742244059.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Something sinister is happening in this school, and I’m gonna get to the bottom of it"
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Erm… I’m not sure I'm following"
+		},
+		{
+			"character": "character-1742244059.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I’ve been hearing people talking about sedating the students"
+		},
+		{
+			"character": "character-1742244059.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Something about compliance or better test scores, whatever It doesn’t matter."
+		},
+		{
+			"character": "character-1742244059.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I don’t know who or where the voices are coming from, but I do know that for some reason you can hear them super well from the basement"
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Is that why you were down here? You were eavesdropping?"
+		},
+		{
+			"character": "character-1742244059.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Eavesdropping? What kind of person do you think I am?"
+		},
+		{
+			"character": "character-1742244059.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I always come down here. I just so happened to accidentally overhear a few things this time…"
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"Yeah..okay..\""
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What are you planning on doing anyways? Are you going to go all hero and save the school?"
+		},
+		{
+			"character": "character-1742244059.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " don't exactly have a plan yet…. But we can come up with something once we get out of here."
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "We?"
+		},
+		{
+			"character": "character-1742244059.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah, you think I’d just let you go off after hearing all this top-secret jazz?"
+		},
+		{
+			"character": "character-1742244059.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You’re stuck with me now"
+		},
+		{
+			"character": "character-1742244059.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Can’t have you spoiling my plans"
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"great… just what I needed to start off the school year\""
+		},
+		{
+			"character": "character-1742244059.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Great, now let's get outta here. This place reeks"
+		},
+		{
+			"character": "character-1742246608.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"you see emy open the door and walk down a hallway and in to a room you\nfollow her in  and hear a loud thump on the other side of the door\" "
+		},
+		{
+			"character": "character-1742244059.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "and now just to find that key to open the door back up stairs, so help me find it so we can escape"
+		},
+		{
+			"change_scene": "res://minigames/Escape-room/scenes/Escape-room.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1747081395.json",
+		"name": "basement"
+	}
+}

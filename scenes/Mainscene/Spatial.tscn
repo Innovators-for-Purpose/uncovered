@@ -211,7 +211,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
 transform = Transform( 1, 0, 0, 0, 1.41956, 0, 0, 0, 1, -25.2079, 12.5167, 15.9889 )
 
 [node name="Mentor" parent="Node2D/Enviroment" instance=ExtResource( 1 )]
-transform = Transform( 0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.5, -25.7524, 12.968, -7.74105 )
+transform = Transform( 0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.5, -25.7524, 12.7998, -7.74105 )
 
 [node name="GC" parent="Node2D/Enviroment" instance=ExtResource( 6 )]
 transform = Transform( -0.051259, 0, 0.49708, 0, 0.475, 0, -0.472226, 0, -0.0539565, -41.2675, 13.2545, -9.54538 )

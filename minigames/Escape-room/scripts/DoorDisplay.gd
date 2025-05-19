@@ -46,7 +46,10 @@ func _on_Doorhndle_pressed():
 		$Button2.hide()
 		$Button3.hide()
 		$Button4.hide()
-		
+		yield(get_tree().create_timer(15), "timeout")
+		var dialog = Dialogic.start('demo')
+		dialog.connect("dialogic_signal", self, "dialog_listener")
+		add_child(dialog)
 #		$Background.texture = load("res://minigames/Escape-room/Escape-room_res/Txtrs/close ups/puzzle 2/door_open.png")
 
 	elif IsCodeRight == true:

@@ -23,4 +23,6 @@ func _physics_process(delta):
 func _on_Area_body_entered(body):
 	if body.name == "MC":
 		MC = body
-		popup()
+		var dialog = Dialogic.start('basement')
+		dialog.connect("dialogic_signal", self, "dialog_listener")
+		add_child(dialog)

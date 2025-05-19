@@ -20,4 +20,5 @@ shape = SubResource( 1 )
 [node name="Clicktorestart" parent="." index="6" instance=ExtResource( 4 )]
 script = ExtResource( 2 )
 
+[connection signal="body_entered" from="Area" to="Area" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Area" to="Clicktorestart" method="_on_Area_body_entered"]

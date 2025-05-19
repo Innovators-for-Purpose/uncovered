@@ -17,5 +17,5 @@ func _ready():
 
 
 func _on_Area_body_entered(body):
-	get_node("$AnimationPlayer").play("Animation")
-	pass # Replace with function body.
+	if body.name == "MC":
+		emit_signal("Blackout")
