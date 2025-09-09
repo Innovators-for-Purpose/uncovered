@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Components/Office/defunctedscenes/.mesh" type="ArrayMesh" id=1]
+
+[node name="OfficedefunctI" type="Spatial"]
+
+[node name="RootNode" type="Spatial" parent="."]
+
+[node name="Cube295" type="MeshInstance" parent="RootNode"]
+transform = Transform( 207.575, 0, 0, 0, -7.42344e-05, 207.574, 0, -207.574, -7.42344e-05, 0, 0, 0 )
+mesh = ExtResource( 1 )

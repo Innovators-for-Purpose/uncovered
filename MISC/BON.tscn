@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://MISC/scripts/BON.gd" type="Script" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 10.6745
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( 496.229, 274.922 )
+scale = Vector2( 4.47583, 4.47583 )
+color = Color( 0, 0.764706, 1, 1 )
+polygon = PoolVector2Array( 0, -10, 2.52859, -9.64679, 5.00885, -8.63807, 7.09748, -7.03599, 8.6875, -4.96875, 9.65625, -2.63281, 10.0156, -0.0078125, 9.69001, 2.63588, 8.69813, 4.97671, 7.10318, 7.0795, 5.03214, 8.66651, 2.58815, 9.66632, 0.0171928, 10.0075, -2.55376, 9.69806, -5.00569, 8.69825, -7.0926, 7.08743, -8.64787, 5.04813, -9.64769, 2.61207, -9.99683, -0.0144248, -9.64769, -2.61712, -8.632, -4.99763, -7.08467, -7.06074, -5.04537, -8.62395, -2.57757, -9.6317 )
+script = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="Polygon2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Polygon2D/Area2D"]
+shape = SubResource( 1 )

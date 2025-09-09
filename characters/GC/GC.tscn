@@ -1,0 +1,229 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://characters/GC/GC.gd" type="Script" id=1]
+[ext_resource path="res://workspaces/Dev_BA/janitor.glb" type="PackedScene" id=2]
+[ext_resource path="res://characters/GC/GCI.gd" type="Script" id=3]
+[ext_resource path="res://characters/GC/Timer2.gd" type="Script" id=4]
+[ext_resource path="res://Image file/textdesign-04.png" type="Texture" id=5]
+[ext_resource path="res://Image file/textdesign-05.png" type="Texture" id=6]
+[ext_resource path="res://assets/fonts/battlenet/new_dynamicfont.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Components/Office/Office_background.png" type="Texture" id=8]
+[ext_resource path="res://characters/janitor/janitor_002.png" type="Texture" id=9]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1 )
+
+[sub_resource type="BoxShape" id=2]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 0, 0, 0 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 960, 540 )
+
+[node name="GC" type="Area"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+collision_mask = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="janitor" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0677013, 0, 0.406425 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="VisibilityNotifier" type="VisibilityNotifier" parent="StaticBody"]
+transform = Transform( 1.05, 0, 0, 0, 3.78, 0, 0, 0, 0.85, 0, 0, 0 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1.05, 0, 0, 0, 3.78, 0, 0, 0, 0.85, 0, 0, 0 )
+shape = SubResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+transform = Transform( 1.05, 0, 0, 0, 3.78, 0, 0, 0, 0.85, 0, 0, 0 )
+shape = SubResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Area" type="Area" parent="."]
+transform = Transform( 0.933597, 0, 0, 0, 1.40411, 0, 0, 0, 0.882052, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+transform = Transform( 5, 0, 0, 0, 3, 0, 0, 0, 6, 0, 0, 0 )
+shape = SubResource( 2 )
+__meta__ = {
+"_editor_description_": "														"
+}
+
+[node name="GCI" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( -822, 1045 )
+script = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="GCI"]
+wait_time = 2.7
+script = ExtResource( 4 )
+
+[node name="Panel" type="Panel" parent="GCI"]
+margin_left = 60.0
+margin_top = 440.0
+margin_right = 100.0
+margin_bottom = 480.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="BackBoard" type="Panel" parent="GCI/Panel"]
+margin_left = -60.0
+margin_top = -440.0
+margin_right = 964.0
+margin_bottom = 160.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="GCI/Panel"]
+margin_left = 585.0
+margin_top = -382.0
+margin_right = 925.0
+margin_bottom = -19.0
+rect_scale = Vector2( 1.16993, 2.2377 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Backtext" type="NinePatchRect" parent="GCI/Panel"]
+margin_right = 904.0
+margin_bottom = 120.0
+texture = ExtResource( 6 )
+region_rect = Rect2( 37.764, 71.282, 941.108, 205.582 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="GCI/Panel"]
+margin_top = -70.0
+margin_right = 410.0
+margin_bottom = -20.0
+texture = ExtResource( 5 )
+region_rect = Rect2( 67.45, 15.688, 293, 55 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="GCI/Panel/NinePatchRect2"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 400.0
+margin_bottom = 40.0
+custom_colors/font_color = Color( 0.721569, 0.886275, 0.823529, 1 )
+custom_fonts/font = ExtResource( 7 )
+align = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="GCI/Panel"]
+margin_left = 129.0
+margin_top = 19.0
+margin_right = 747.0
+margin_bottom = 100.0
+custom_colors/font_color = Color( 0.701961, 0.878431, 0.811765, 1 )
+custom_fonts/font = ExtResource( 7 )
+autowrap = true
+clip_text = true
+
+[node name="Button" type="NinePatchRect" parent="GCI/Panel"]
+margin_left = 858.0
+margin_top = -425.0
+margin_right = 958.0
+margin_bottom = -375.0
+texture = ExtResource( 5 )
+region_rect = Rect2( 67.1929, 18.5056, 295.511, 48.545 )
+patch_margin_left = 1
+patch_margin_right = 2
+
+[node name="Label" type="Label" parent="GCI/Panel/Button"]
+margin_left = 20.0
+margin_top = 7.0
+margin_right = 95.0
+margin_bottom = 38.0
+custom_colors/font_color = Color( 0.721569, 0.886275, 0.823529, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Skip >"
+autowrap = true
+clip_text = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Button" type="Button" parent="GCI/Panel/Button"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_right = 100.0
+margin_bottom = 50.0
+
+[node name="Button2" type="NinePatchRect" parent="GCI/Panel"]
+margin_left = 859.0
+margin_top = -368.0
+margin_right = 959.0
+margin_bottom = -318.0
+texture = ExtResource( 5 )
+region_rect = Rect2( 67.1929, 18.5056, 295.511, 48.545 )
+patch_margin_left = 1
+patch_margin_right = 2
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="GCI/Panel/Button2"]
+margin_left = 6.0
+margin_top = 7.0
+margin_right = 96.0
+margin_bottom = 38.0
+custom_colors/font_color = Color( 0.721569, 0.886275, 0.823529, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Skip+1>"
+autowrap = true
+clip_text = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Button2" type="Button" parent="GCI/Panel/Button2"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_right = 100.0
+margin_bottom = 50.0
+__meta__ = {
+"_editor_description_": ""
+}
+
+[connection signal="area_entered" from="." to="GCI" method="_on_GC_area_entered"]
+[connection signal="area_exited" from="." to="GCI" method="_on_GC_area_exited"]
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_entered" from="Area" to="GCI" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="Area" to="GCI/Timer" method="_on_Area_body_entered"]
+[connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]
+[connection signal="body_exited" from="Area" to="GCI" method="_on_Area_body_exited"]
+[connection signal="body_exited" from="Area" to="GCI/Timer" method="_on_Area_body_exited"]
+[connection signal="timeout" from="GCI/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="GCI/Timer" to="GCI" method="_on_Timer_timeout"]
+[connection signal="pressed" from="GCI/Panel/Button/Button" to="GCI" method="_on_Button_pressed"]
+[connection signal="pressed" from="GCI/Panel/Button/Button" to="GCI/Timer" method="_on_Button_pressed"]
+[connection signal="pressed" from="GCI/Panel/Button2/Button2" to="GCI" method="_on_Button2_pressed"]
+[connection signal="pressed" from="GCI/Panel/Button2/Button2" to="GCI/Timer" method="_on_Button2_pressed"]

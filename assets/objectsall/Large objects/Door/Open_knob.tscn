@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/objectsall/Large objects/Door/Open_knob.gd" type="Script" id=1]
+
+[sub_resource type="SphereShape" id=1]
+radius = 0.967927
+
+[node name="Open_knob" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="CSGSphere" type="CSGBox" parent="."]
+
+[node name="Area" type="Area" parent="CSGSphere"]
+
+[node name="CollisionShape" type="CollisionShape" parent="CSGSphere/Area"]
+shape = SubResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.16302 )
+
+[connection signal="body_entered" from="CSGSphere/Area" to="." method="_on_Area_body_entered"]
+[connection signal="input_event" from="CSGSphere/Area" to="." method="_on_Area_input_event"]

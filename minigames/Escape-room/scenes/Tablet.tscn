@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://minigames/Escape-room/scripts/TabletPzl.gd" type="Script" id=1]
+[ext_resource path="res://minigames/Escape-room/Escape-room_res/Txtrs/close ups/puzzle 3/Untitled_Artwork 47(UPG).png" type="Texture" id=3]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+pause_mode = 2
+layer = -50
+offset = Vector2( 510.562, 288.972 )
+transform = Transform2D( 1, 0, 0, 1, 510.562, 288.972 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+scale = Vector2( 1.126, 1.126 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Plug" type="Button" parent="ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -95.562
+margin_top = 188.028
+margin_right = -17.562
+margin_bottom = 242.028
+rect_rotation = 50.9617
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="tabloot" type="Button" parent="ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 39.438
+margin_top = -267.972
+margin_right = 369.438
+margin_bottom = -134.972
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="pressed" from="ParallaxLayer/Plug" to="ParallaxLayer" method="_on_Plug_pressed"]
+[connection signal="pressed" from="ParallaxLayer/tabloot" to="ParallaxLayer" method="_on_tabloot_pressed"]

@@ -1,8 +1,0 @@
-[gd_scene format=2]
-
-[node name="Node" type="Node"]
-
-[node name="Label" type="Label" parent="."]
-margin_right = 861.0
-margin_bottom = 14.0
-text = "Hey, it's me, Rakim. Kanye you need to find the Black Box and unlock it's secrets. Use WASD, the spacebar to jump, and shift to sprint!"

@@ -1,0 +1,21 @@
+{
+	"color": "#ffffffff",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1742244059.json",
+	"mirror_portraits": false,
+	"name": "Emy",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://characters/Zach/emy.png"
+		}
+	],
+	"scale": 32,
+	"theme": "theme-1741904744.cfg"
+}

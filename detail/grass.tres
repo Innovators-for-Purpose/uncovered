@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://minigames/Escape-room/grass-mat.tres" type="Shader" id=1]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/Albedo = Color( 0.145098, 0.666667, 0.0862745, 1 )

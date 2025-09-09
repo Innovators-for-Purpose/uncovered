@@ -1,0 +1,39 @@
+[gd_resource type="VisualShader" load_steps=2 format=2]
+
+[sub_resource type="VisualShaderNodeColorUniform" id=1]
+output_port_for_preview = 0
+uniform_name = "Albedo"
+
+[resource]
+code = "shader_type spatial;
+render_mode specular_schlick_ggx, async_visible;
+
+uniform vec4 Albedo : hint_color;
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// ColorUniform:2
+	vec3 n_out2p0 = Albedo.rgb;
+	float n_out2p1 = Albedo.a;
+
+// Output:0
+	ALBEDO = n_out2p0;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( -266.272, 63.5115 )
+nodes/vertex/0/position = Vector2( 1860, 140 )
+nodes/fragment/2/node = SubResource( 1 )
+nodes/fragment/2/position = Vector2( -579.226, 415.037 )
+nodes/fragment/connections = PoolIntArray( 2, 0, 0, 0 )

@@ -1,0 +1,554 @@
+[gd_scene load_steps=45 format=2]
+
+<<<<<<< HEAD:minigames/BossBattle/Spatial.tscn
+[ext_resource path="res://Scenes/Charater scenes/Mentor/Mentor/Mentor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://workspaces/adnan/basement project.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Components/Hallway/Classroom_hallway_main_dead_end_door.fbx" type="PackedScene" id=3]
+[ext_resource path="res://workspaces/dev_Uri/Transition_Object.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Components/Office/mainscenes/office-3.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Charater scenes/GC/GC.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Charater scenes/Student/StudentII.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/objectsall/Large objects/chairsdesks/classroom_chairs_and_Desks.fbx" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Charater scenes/Student/Student.tscn" type="PackedScene" id=9]
+[ext_resource path="res://characters/MC/MC.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Components/Classroom L1/Classroom.fbx" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Charater scenes/Laura/Laura.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Charater scenes/Student/IDesk.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Charater scenes/Student/Bully.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/objectsall/Large objects/tables/Main_Table.fbx" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Charater scenes/Student/StudentI.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Components/Dialogue/Dialogue.tscn" type="PackedScene" id=17]
+[ext_resource path="res://workspaces/dev_Uri/Transition_Object2.gd" type="Script" id=18]
+[ext_resource path="res://Components/Hallway/Classroom_HALLWAY.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Charater scenes/Student/Bulletin Board.tscn" type="PackedScene" id=20]
+[ext_resource path="res://workspaces/dev_Uri/Transition_Object3.gd" type="Script" id=21]
+[ext_resource path="res://assets/objectsall/Large objects/whiteboards/Whiteboard.fbx" type="PackedScene" id=23]
+[ext_resource path="res://assets/objectsall/Large objects/Door/Hallway Door.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Components/Classroom L1/classroom_teacher_Desk.fbx" type="PackedScene" id=25]
+[ext_resource path="res://Components/Hallway/atrium_dead_end.tscn" type="PackedScene" id=26]
+[ext_resource path="res://packs/Text.fbx" type="PackedScene" id=27]
+[ext_resource path="res://minigames/BossBattle/Transition_Object_BossBattle.gd" type="Script" id=28]
+[ext_resource path="res://Components/atrium/assets/Atrium.glb" type="PackedScene" id=29]
+
+
+=======
+[ext_resource path="res://scenes/Hall/Transition_Object_BossBattle.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Hall/Classroom_HALLWAY.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Hall/Hallway Door.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Hall/Transition_Object.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Hall/Transition_Object2.gd" type="Script" id=5]
+[ext_resource path="res://scenes/Hall/Transition_Object3.gd" type="Script" id=6]
+[ext_resource path="res://MC/MC.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Charater scenes/Mentor/Mentor/Mentor.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Charater scenes/GC/GC.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Dialogue/Dialogue/Dialogue.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Charater scenes/Laura/Laura.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Charater scenes/Student/Student.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Charater scenes/Student/StudentI.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Charater scenes/Student/StudentII.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Dev_BA/Material_014.material" type="Material" id=15]
+[ext_resource path="res://Scenes/Charater scenes/Student/Bulletin Board.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Charater scenes/Student/Bully.tscn" type="PackedScene" id=17]
+[ext_resource path="res://other parts of the hallway/Classroom.fbx" type="PackedScene" id=18]
+[ext_resource path="res://dev_sabrina/hallnimation/hallwayhopeful1.tscn" type="PackedScene" id=19]
+[ext_resource path="res://adnan/WelcomeText.gd" type="Script" id=20]
+[ext_resource path="res://other parts of the hallway/Classroom_hallway_main_dead_end_door.fbx" type="PackedScene" id=21]
+[ext_resource path="res://other parts of the hallway/classroom_teacher_Desk.fbx" type="PackedScene" id=22]
+[ext_resource path="res://other parts of the hallway/Main_Table.fbx" type="PackedScene" id=23]
+[ext_resource path="res://other parts of the hallway/classroom_chairs_and_Desks.fbx" type="PackedScene" id=24]
+[ext_resource path="res://Atrium.glb" type="PackedScene" id=25]
+[ext_resource path="res://Dev_MS/Minigame/Assets/battlenet.ttf" type="DynamicFontData" id=26]
+[ext_resource path="res://other parts of the hallway/atrium_dead_end.fbx" type="PackedScene" id=27]
+[ext_resource path="res://other parts of the hallway/office-3.fbx" type="PackedScene" id=28]
+[ext_resource path="res://adnan/basement project.tscn" type="PackedScene" id=29]
+[ext_resource path="res://other parts of the hallway/Whiteboard.fbx" type="PackedScene" id=30]
+[ext_resource path="res://other parts of the hallway/Text.fbx" type="PackedScene" id=31]
+[ext_resource path="res://OFFICE.tscn" type="PackedScene" id=32]
+>>>>>>> bo2:scenes/Hall/Spatial.tscn
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 7.5, 0 ), Vector3( 0, 15, 0 ), Vector3( 0, 22.5, 0 ), Vector3( 0, 30, 0 ), Vector3( 0, 37.5, 0 ), Vector3( 0, 45, 0 ), Vector3( 0, 52.5, 0 ), Vector3( 0, 60, 0 ), Vector3( 0, 67.5, 0 ), Vector3( 0, 75, 0 ) ]
+}
+
+[sub_resource type="BoxShape" id=10]
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 7.5, 0 ), Vector3( 0, 15, 0 ), Vector3( 0, 22.5, 0 ), Vector3( 0, 30, 0 ), Vector3( 0, 37.5, 0 ), Vector3( 0, 45, 0 ), Vector3( 0, 52.5, 0 ), Vector3( 0, 60, 0 ), Vector3( 0, 67.5, 0 ), Vector3( 0, 75, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 7.5, 0 ), Vector3( 0, 15, 0 ), Vector3( 0, 22.5, 0 ), Vector3( 0, 30, 0 ), Vector3( 0, 37.5, 0 ), Vector3( 0, 45, 0 ), Vector3( 0, 52.5, 0 ), Vector3( 0, 60, 0 ), Vector3( 0, 67.5, 0 ), Vector3( 0, 75, 0 ) ]
+}
+
+[sub_resource type="SphereShape" id=8]
+radius = 0.967927
+
+[sub_resource type="BoxShape" id=7]
+<<<<<<< HEAD:minigames/BossBattle/Spatial.tscn
+extents = Vector3( 95.2636, 10.2224, 62.9712 )
+=======
+extents = Vector3( 95.2636, 0.001, 62.9712 )
+
+[sub_resource type="PlaneMesh" id=9]
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.972549, 0.968627, 0.968627, 1 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 25
+font_data = ExtResource( 26 )
+>>>>>>> bo2:scenes/Hall/Spatial.tscn
+
+[node name="RootScene" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0466938, 6.2102, 18.9819 )
+
+<<<<<<< HEAD:minigames/BossBattle/Spatial.tscn
+[node name="Classroom_HALLWAY" parent="." instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90735e-06, 7.60065, 12.0768 )
+
+[node name="Classroom_HALLWAY2" parent="." instance=ExtResource( 19 )]
+transform = Transform( -0.00991333, -0.00277475, 0.999947, 1.45785e-05, 0.999996, 0.00277503, -0.999951, 4.20874e-05, -0.00991325, 12.8519, 3.63728, -96.4565 )
+=======
+[node name="Basement_HALLWAY" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.99998, 0, 0.00635277, 0, 1, 0, -0.00635277, 0, -0.99998, -49.372, 2.501, -84.6347 )
+>>>>>>> bo2:scenes/Hall/Spatial.tscn
+
+[node name="Door1" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4368, 6.612, -43.2668 )
+
+<<<<<<< HEAD:minigames/BossBattle/Spatial.tscn
+[node name="Classroom_HALLWAY_door" parent="Door1" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00915527, 0.414001, 1.377 )
+=======
+[node name="Classroom_HALLWAY_door" parent="Door1" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.294161, 0.342646, 1.38141 )
+>>>>>>> bo2:scenes/Hall/Spatial.tscn
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Door1"]
+anims/RESET = SubResource( 1 )
+anims/open = SubResource( 2 )
+
+[node name="Area" type="Area" parent="Door1"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Door1/Area"]
+transform = Transform( 1, 0, 0, 0, 10.1406, 0, 0, 0, 3.93274, 0, 24.0712, 0.848534 )
+shape = SubResource( 10 )
+
+[node name="Door2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5682, 6.612, -53.8644 )
+
+[node name="Classroom_HALLWAY_door" parent="Door2" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00915527, 0.414001, 1.377 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Door2"]
+anims/RESET = SubResource( 3 )
+anims/open = SubResource( 4 )
+
+[node name="Door3" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5043, 6.85337, -64.2323 )
+
+<<<<<<< HEAD:minigames/BossBattle/Spatial.tscn
+[node name="Classroom_HALLWAY_door" parent="Door3" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00915527, 0.414001, 1.377 )
+=======
+[node name="Classroom_HALLWAY_door" parent="Door3" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.265951, 0, 1.40448 )
+>>>>>>> bo2:scenes/Hall/Spatial.tscn
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Door3"]
+anims/RESET = SubResource( 5 )
+anims/open = SubResource( 6 )
+
+[node name="Knob1" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -22.7392, 6.95947, -41.8746 )
+
+[node name="MCSRevengeTransport" type="Spatial" parent="."]
+transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -32.6436, 7.72239, -24.4908 )
+script = ExtResource( 28 )
+
+[node name="BossBattleTimer" type="Timer" parent="MCSRevengeTransport"]
+
+[node name="CSGSphere" type="CSGSphere" parent="MCSRevengeTransport"]
+
+[node name="Area" type="Area" parent="MCSRevengeTransport/CSGSphere"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MCSRevengeTransport/CSGSphere/Area"]
+shape = SubResource( 8 )
+
+[node name="Camera" type="Camera" parent="MCSRevengeTransport"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.98928 )
+
+[node name="Knob2" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -22.5564, 7.0205, -52.4807 )
+script = ExtResource( 18 )
+
+[node name="Knob3" parent="." instance=ExtResource( 4 )]
+<<<<<<< HEAD:minigames/BossBattle/Spatial.tscn
+transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -22.5826, 7.01692, -65.4476 )
+script = ExtResource( 21 )
+=======
+transform = Transform( 0.128424, 0, 0, 0, 0.10088, 0, 0, 0, 0.103299, -22.7804, 6.83834, -62.826 )
+script = ExtResource( 6 )
+>>>>>>> bo2:scenes/Hall/Spatial.tscn
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6082, -3.20107, -1.29853 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.78874, 3.10639, 21.577 )
+shape = SubResource( 7 )
+
+<<<<<<< HEAD:minigames/BossBattle/Spatial.tscn
+[node name="Classroom" parent="." instance=ExtResource( 11 )]
+=======
+[node name="CollisionShape2" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.78874, -2.02676, -5.75442 )
+shape = SubResource( 7 )
+
+[node name="StaticBody3" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6082, -2.66825, -15.3158 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.824, 2.85998, -1.715 )
+
+[node name="Classroom" parent="." instance=ExtResource( 18 )]
+>>>>>>> bo2:scenes/Hall/Spatial.tscn
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0215, 6.65417, -38.6718 )
+
+[node name="classroom_chairs_and_Desks" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5868, 6.90973, -40.1345 )
+
+[node name="classroom_teacher_Desk" parent="." instance=ExtResource( 25 )]
+transform = Transform( 0.998921, 0.00336558, -0.0463115, -0.0034327, 0.999993, -0.00136941, 0.0463066, 0.00152693, 0.998926, -17.3227, 6.20063, -34.0485 )
+
+[node name="Classroom_hallway_main_dead_end_door" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.999991, 0, 0.00427596, 0, 1, 0, -0.00427596, 0, -0.999991, -15.956, 7.12938, -24.4338 )
+
+[node name="Main_Table" parent="." instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.5448, 6.65374, -23.299 )
+
+[node name="StaticBody2" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.26584, 7.33924, -11.8516 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.3814, -7.25454, -55.5926 )
+shape = SubResource( 8 )
+
+[node name="office-3" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.962766, 0, 0, 0, 1, 0, 0, 0, 0.967171, -36.3563, 7.60737, -24.461 )
+
+<<<<<<< HEAD:minigames/BossBattle/Spatial.tscn
+[node name="BASEMENT" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.8567, 2.69703, -75.4432 )
+=======
+[node name="BASEMENT" parent="." instance=ExtResource( 29 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.4182, 0.198606, -50.7483 )
+>>>>>>> bo2:scenes/Hall/Spatial.tscn
+
+[node name="Node2D" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00904, 0 )
+
+[node name="Enviroment" type="CanvasLayer" parent="Node2D"]
+
+<<<<<<< HEAD:minigames/BossBattle/Spatial.tscn
+[node name="MC" parent="Node2D/Enviroment" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.517, 12.458, 11.11 )
+
+[node name="Mentor" parent="Node2D/Enviroment" instance=ExtResource( 1 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -24.4266, 12.458, 4.39275 )
+=======
+[node name="MC" parent="Node2D/Enviroment" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.4143, 13.6283, 11.5894 )
+
+[node name="Mentor" parent="Node2D/Enviroment" instance=ExtResource( 8 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -24.4266, 13.0664, 4.39275 )
+>>>>>>> bo2:scenes/Hall/Spatial.tscn
+
+[node name="Dialogueplayer" parent="Node2D/Enviroment/Mentor" instance=ExtResource( 17 )]
+follow_viewport_enable = true
+
+<<<<<<< HEAD:minigames/BossBattle/Spatial.tscn
+[node name="GC" parent="Node2D/Enviroment" instance=ExtResource( 6 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -40.2284, 12.458, -5.783 )
+=======
+[node name="GC" parent="Node2D/Enviroment" instance=ExtResource( 9 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -40.2284, 13.0664, -5.783 )
+>>>>>>> bo2:scenes/Hall/Spatial.tscn
+
+[node name="Dialogueplayer" parent="Node2D/Enviroment/GC" instance=ExtResource( 17 )]
+follow_viewport_enable = true
+dialogue_file = "res://Dialogue/jsons/GC/GC.json"
+
+<<<<<<< HEAD:minigames/BossBattle/Spatial.tscn
+[node name="Laura" parent="Node2D/Enviroment" instance=ExtResource( 12 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -24.504, 12.458, -43.349 )
+=======
+[node name="Laura" parent="Node2D/Enviroment" instance=ExtResource( 11 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -24.504, 13.0664, -43.349 )
+>>>>>>> bo2:scenes/Hall/Spatial.tscn
+
+[node name="Dialogueplayer" parent="Node2D/Enviroment/Laura" instance=ExtResource( 17 )]
+follow_viewport_enable = true
+dialogue_file = "res://Dialogue/jsons/Laura/Laura.json"
+
+<<<<<<< HEAD:minigames/BossBattle/Spatial.tscn
+[node name="Student" parent="Node2D/Enviroment" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5819, 12.4289, -6.10306 )
+=======
+[node name="Student" parent="Node2D/Enviroment" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5819, 12.5408, -4.7537 )
+>>>>>>> bo2:scenes/Hall/Spatial.tscn
+
+[node name="Dialogueplayer" parent="Node2D/Enviroment/Student" instance=ExtResource( 17 )]
+follow_viewport_enable = true
+dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Student.json"
+
+<<<<<<< HEAD:minigames/BossBattle/Spatial.tscn
+[node name="StudentI" parent="Node2D/Enviroment" instance=ExtResource( 16 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -19.8679, 12.458, 0.481759 )
+=======
+[node name="StudentI" parent="Node2D/Enviroment" instance=ExtResource( 13 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -19.8679, 13.0664, 0.481759 )
+>>>>>>> bo2:scenes/Hall/Spatial.tscn
+
+[node name="Dialogueplayer" parent="Node2D/Enviroment/StudentI" instance=ExtResource( 17 )]
+follow_viewport_enable = true
+dialogue_file = "res://Scenes/Charater scenes/Student/jsons/studentI.json"
+
+<<<<<<< HEAD:minigames/BossBattle/Spatial.tscn
+[node name="StudentII" parent="Node2D/Enviroment" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -30.6004, 12.4576, -6.41473 )
+=======
+[node name="StudentII" parent="Node2D/Enviroment" instance=ExtResource( 14 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -30.6004, 13.066, -6.41473 )
+>>>>>>> bo2:scenes/Hall/Spatial.tscn
+
+[node name="Dialogueplayer" parent="Node2D/Enviroment/StudentII" instance=ExtResource( 17 )]
+follow_viewport_enable = true
+dialogue_file = "res://Scenes/Charater scenes/Student/jsons/StudentII.json"
+
+<<<<<<< HEAD:minigames/BossBattle/Spatial.tscn
+[node name="IDesk" parent="Node2D/Enviroment" instance=ExtResource( 13 )]
+transform = Transform( 0.547367, 0, 0, 0, 1, 0, 0, 0, 1, -28.1483, 12.4367, -9.60219 )
+
+[node name="Dialogueplayer" parent="Node2D/Enviroment/IDesk" instance=ExtResource( 17 )]
+follow_viewport_enable = true
+dialogue_file = "res://Scenes/Charater scenes/Student/jsons/IDesk.json"
+
+[node name="Bulletin Board" parent="Node2D/Enviroment" instance=ExtResource( 20 )]
+transform = Transform( -0.390375, 0, -0.315051, 0, 0.501647, 0, 0.315051, 0, -0.390375, -17.7717, 14.0179, -9.26607 )
+=======
+[node name="Bulletin Board" parent="Node2D/Enviroment" instance=ExtResource( 16 )]
+transform = Transform( -0.390375, 0, -0.315051, 0, 0.501647, 0, 0.315051, 0, -0.390375, -17.7717, 14.6263, -9.26607 )
+>>>>>>> bo2:scenes/Hall/Spatial.tscn
+
+[node name="Dialogueplayer" parent="Node2D/Enviroment/Bulletin Board" instance=ExtResource( 17 )]
+follow_viewport_enable = true
+dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Bulletin Board.json"
+
+<<<<<<< HEAD:minigames/BossBattle/Spatial.tscn
+[node name="Bully" parent="Node2D/Enviroment" instance=ExtResource( 14 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -28.41, 12.458, -3.21564 )
+=======
+[node name="Bully" parent="Node2D/Enviroment" instance=ExtResource( 17 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -28.41, 13.0664, -3.21564 )
+>>>>>>> bo2:scenes/Hall/Spatial.tscn
+
+[node name="Dialogueplayer" parent="Node2D/Enviroment/Bully" instance=ExtResource( 17 )]
+follow_viewport_enable = true
+dialogue_file = "res://Scenes/Charater scenes/Student/jsons/Bully.json"
+
+<<<<<<< HEAD:minigames/BossBattle/Spatial.tscn
+[node name="Knob4" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.0164927, 0, 0, 0, 0.0101768, 0, 0, 0, 0.0106707, -25.284, 7.7173, -45.119 )
+
+[node name="Whiteboard" parent="." instance=ExtResource( 23 )]
+=======
+[node name="Whiteboard" parent="." instance=ExtResource( 30 )]
+>>>>>>> bo2:scenes/Hall/Spatial.tscn
+transform = Transform( 0.999963, 0, 0.00863927, 0, 1, 0, -0.00863927, 0, 0.999963, -17.416, 7.99107, -31.8914 )
+
+[node name="Atrium" parent="." instance=ExtResource( 29 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.6058, 6.47473, -23.7077 )
+
+[node name="Text" parent="." instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.7721, 5.98089, -13.6491 )
+
+<<<<<<< HEAD:minigames/BossBattle/Spatial.tscn
+[node name="atrium_dead_end" parent="." instance=ExtResource( 26 )]
+transform = Transform( 0.996461, 0, 0, 0, 0.960988, 0, 0, 0, 1.81984, -7.648, 7.52099, -24.4405 )
+
+=======
+[node name="hallwayhopeful" parent="." instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5041, 5.11673, -52.8757 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 3.15411, 0, 0, 0, 1, 0, 0, 0, 8.87264, -24.8787, 5.51568, -9.85716 )
+mesh = SubResource( 9 )
+material/0 = ExtResource( 15 )
+
+[node name="Welcome" type="CanvasLayer" parent="."]
+script = ExtResource( 20 )
+
+[node name="WelcomeTimer" type="Timer" parent="Welcome"]
+
+[node name="Node2D2" type="Node2D" parent="Welcome"]
+
+[node name="Instructions" type="MarginContainer" parent="Welcome/Node2D2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.0
+margin_top = 96.0
+margin_right = 608.0
+margin_bottom = 546.0
+rect_scale = Vector2( 1.00117, 1 )
+
+[node name="Panel" type="Panel" parent="Welcome/Node2D2/Instructions"]
+margin_right = 610.0
+margin_bottom = 450.0
+custom_styles/panel = SubResource( 11 )
+
+[node name="MarginContainer" type="MarginContainer" parent="Welcome/Node2D2/Instructions"]
+margin_right = 610.0
+margin_bottom = 450.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Welcome/Node2D2/Instructions/MarginContainer"]
+margin_right = 610.0
+margin_bottom = 450.0
+rect_pivot_offset = Vector2( 8.98948, 2 )
+alignment = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="Welcome/Node2D2/Instructions/MarginContainer/HBoxContainer"]
+margin_left = 76.0
+margin_top = 44.0
+margin_right = 534.0
+margin_bottom = 405.0
+custom_fonts/font = SubResource( 12 )
+text = "Welcome to iFp's first game: Uncover!
+
+Walk around with the letters WASD
+on your keyboard.
+Press T to close messages.
+
+Press Q to release your mouse pointer.
+
+If you reach the end of a path in the game, just close 
+and start over.
+
+... and don't be afraid to walk through a door or two  :)
+
+(avoid walls though)"
+
+[node name="OFFICE" parent="." instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.2688, 0.587877, -19.3492 )
+
+[connection signal="body_entered" from="Door1/Area" to="Knob1" method="door_entered"]
+>>>>>>> bo2:scenes/Hall/Spatial.tscn
+[connection signal="timeout" from="MCSRevengeTransport/BossBattleTimer" to="MCSRevengeTransport" method="_on_Timer_timeout"]
+[connection signal="input_event" from="MCSRevengeTransport/CSGSphere/Area" to="MCSRevengeTransport" method="_on_Area_input_event"]
+[connection signal="timeout" from="Timer" to="Knob1" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Node2D/Enviroment/Mentor" to="Node2D/Enviroment/Mentor/Dialogueplayer" method="_on_Mentor_body_entered"]
+[connection signal="ready" from="Node2D/Enviroment/Mentor/Dialogueplayer" to="Node2D/Enviroment/Mentor/Dialogueplayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_entered" from="Node2D/Enviroment/GC" to="Node2D/Enviroment/GC/Dialogueplayer" method="_on_GC_body_entered"]
+[connection signal="ready" from="Node2D/Enviroment/GC/Dialogueplayer" to="Node2D/Enviroment/GC/Dialogueplayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_entered" from="Node2D/Enviroment/Laura" to="Node2D/Enviroment/Laura/Dialogueplayer" method="_on_Laura_body_entered"]
+[connection signal="ready" from="Node2D/Enviroment/Laura/Dialogueplayer" to="Node2D/Enviroment/Laura/Dialogueplayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_exited" from="Node2D/Enviroment/Student" to="Node2D/Enviroment/Student" method="_on_Student_body_exited"]
+[connection signal="ready" from="Node2D/Enviroment/Student/Dialogueplayer" to="Node2D/Enviroment/Student/Dialogueplayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_exited" from="Node2D/Enviroment/StudentI" to="Node2D/Enviroment/StudentI" method="_on_StudentI_body_exited"]
+[connection signal="ready" from="Node2D/Enviroment/StudentI/Dialogueplayer" to="Node2D/Enviroment/StudentI/Dialogueplayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_exited" from="Node2D/Enviroment/StudentII" to="Node2D/Enviroment/StudentII" method="_on_StudentII_body_exited"]
+[connection signal="ready" from="Node2D/Enviroment/StudentII/Dialogueplayer" to="Node2D/Enviroment/StudentII/Dialogueplayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_exited" from="Node2D/Enviroment/Bulletin Board" to="Node2D/Enviroment/Bulletin Board" method="_on_Bulletin_Board_body_exited"]
+[connection signal="ready" from="Node2D/Enviroment/Bulletin Board/Dialogueplayer" to="Node2D/Enviroment/Bulletin Board/Dialogueplayer" method="_on_Dialogueplayer_ready"]
+[connection signal="body_entered" from="Node2D/Enviroment/Bully" to="Node2D/Enviroment/Mentor/Dialogueplayer" method="_on_Bully_body_entered"]
+[connection signal="ready" from="Node2D/Enviroment/Bully/Dialogueplayer" to="Node2D/Enviroment/Bully/Dialogueplayer" method="_on_Dialogueplayer_ready"]
+[connection signal="timeout" from="Welcome/WelcomeTimer" to="Welcome" method="_on_Timer_timeout"]

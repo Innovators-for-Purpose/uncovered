@@ -1,0 +1,158 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://assets/fonts/battlenet/battlenetcopy.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Dialogue/scripts/DialoguePlayer.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/Cairo/static/Cairo-ExtraLight.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://scenes/oldscenes/images/A_black_image.jpg.png" type="Texture" id=4]
+[ext_resource path="res://assets/fonts/battlenet/new_dynamicfont.tres" type="DynamicFont" id=5]
+
+[sub_resource type="CanvasItemMaterial" id=16]
+
+[sub_resource type="GDScript" id=17]
+
+[sub_resource type="StreamTexture" id=21]
+flags = 7
+
+[sub_resource type="VisualShaderNodeTexture" id=18]
+texture = SubResource( 21 )
+
+[sub_resource type="VisualShaderNodeScalarConstant" id=19]
+constant = 3.508
+
+[sub_resource type="VisualShader" id=20]
+code = "shader_type spatial;
+render_mode specular_schlick_ggx, async_visible;
+
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// Scalar:4
+	float n_out4p0 = 3.508000;
+
+// Output:0
+	ALPHA = n_out4p0;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( -327.667, 70.5978 )
+nodes/fragment/2/node = SubResource( 18 )
+nodes/fragment/2/position = Vector2( -420, 380 )
+nodes/fragment/4/node = SubResource( 19 )
+nodes/fragment/4/position = Vector2( -120, 240 )
+nodes/fragment/connections = PoolIntArray( 4, 0, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=22]
+next_pass = SubResource( 16 )
+shader = SubResource( 20 )
+script = SubResource( 17 )
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=13]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=14]
+
+[sub_resource type="DynamicFont" id=15]
+
+[sub_resource type="DynamicFont" id=24]
+font_data = ExtResource( 1 )
+
+[node name="Dialogueplayer" type="CanvasLayer"]
+script = ExtResource( 2 )
+dialogue_file = "res://Dialogue/jsons/Mc/Mc.json"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+material = SubResource( 22 )
+anchor_right = 0.0898438
+anchor_bottom = 0.07
+margin_left = 288.0
+margin_top = 451.0
+margin_right = 449.0
+margin_bottom = 498.0
+rect_scale = Vector2( 1.58803, 1.27942 )
+region_rect = Rect2( 1529, 746, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Panel" type="Panel" parent="NinePatchRect"]
+margin_left = -3.0
+margin_top = -31.0
+margin_right = 263.0
+margin_bottom = 108.0
+custom_styles/panel = SubResource( 23 )
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect"]
+anchor_bottom = 0.211
+margin_left = 8.186
+margin_top = -4.69
+margin_right = 190.186
+margin_bottom = 3.1
+rect_scale = Vector2( 1.32745, 1.33231 )
+size_flags_stretch_ratio = 0.0
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/mono_font = SubResource( 13 )
+custom_fonts/bold_italics_font = SubResource( 14 )
+custom_fonts/bold_font = SubResource( 15 )
+custom_fonts/normal_font = ExtResource( 5 )
+text = "Name"
+scroll_active = false
+
+[node name="Message" type="RichTextLabel" parent="NinePatchRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -113.276
+margin_top = 48.459
+margin_right = 98.724
+margin_bottom = 142.459
+rect_scale = Vector2( 1, 1.28138 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/normal_font = SubResource( 24 )
+text = "Message"
+scroll_active = false
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Background" type="NinePatchRect" parent="NinePatchRect"]
+visible = false
+modulate = Color( 0.0666667, 0.0627451, 0.0627451, 0.564706 )
+self_modulate = Color( 0.0862745, 0.0823529, 0.0823529, 1 )
+show_behind_parent = true
+anchor_top = -0.272727
+anchor_right = 0.00790514
+anchor_bottom = -0.0727273
+margin_top = -25.0
+margin_right = 253.0
+margin_bottom = 86.0
+rect_scale = Vector2( 1, 1.35 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

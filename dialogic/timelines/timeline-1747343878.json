@@ -1,0 +1,13 @@
+{
+	"events": [
+		{
+			"change_scene": "res://testmap/TEST.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1747343878.json",
+		"name": "demo"
+	}
+}

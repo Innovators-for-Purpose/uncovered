@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://minigames/BossBattle/BUUUUBEL.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+rotation = 0.813926
+scale = Vector2( 0.614733, 0.628392 )
+texture = ExtResource( 1 )

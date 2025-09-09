@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="KnobI" type="Spatial"]
+
+[node name="CSGSphere" type="CSGSphere" parent="."]
+
+[node name="Area" type="Area" parent="CSGSphere"]
+
+[node name="CollisionShape" type="CollisionShape" parent="CSGSphere/Area"]
+
+[node name="Camera" type="Camera" parent="."]

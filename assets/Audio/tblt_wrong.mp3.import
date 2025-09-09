@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tblt_wrong.mp3-7ac40f5dd8c91e4c608ed6e15285f4e1.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/tblt_wrong.mp3"
+dest_files=[ "res://.import/tblt_wrong.mp3-7ac40f5dd8c91e4c608ed6e15285f4e1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

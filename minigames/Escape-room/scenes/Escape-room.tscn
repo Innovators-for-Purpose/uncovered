@@ -1,0 +1,66 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://minigames/Escape-room/scenes/Front.tscn" type="PackedScene" id=1]
+[ext_resource path="res://minigames/Escape-room/scenes/BackSide.tscn" type="PackedScene" id=2]
+[ext_resource path="res://minigames/Escape-room/scripts/BackSide.gd" type="Script" id=3]
+[ext_resource path="res://minigames/Escape-room/scenes/GearBox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://minigames/Escape-room/scenes/Tablet.tscn" type="PackedScene" id=5]
+[ext_resource path="res://minigames/Escape-room/scenes/Door_display.tscn" type="PackedScene" id=6]
+[ext_resource path="res://minigames/Escape-room/scenes/Cabinets-puzzle2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://minigames/Escape-room/scenes/PlayerGUI.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Components/Office/Computer.tscn" type="PackedScene" id=9]
+[ext_resource path="res://minigames/Escape-room/scripts/MAIN.gd" type="Script" id=10]
+[ext_resource path="res://pause_ctrl.tscn" type="PackedScene" id=11]
+
+[sub_resource type="Environment" id=4]
+background_mode = 4
+adjustment_enabled = true
+adjustment_brightness = 0.82
+adjustment_contrast = 1.06
+adjustment_saturation = 0.91
+
+[node name="Node2D" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 10 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 514, 311 )
+scale = Vector2( 1.00632, 1.00718 )
+current = true
+smoothing_enabled = true
+smoothing_speed = 2.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Front" parent="." instance=ExtResource( 1 )]
+
+[node name="Back" parent="." instance=ExtResource( 2 )]
+visible = false
+script = ExtResource( 3 )
+
+[node name="Cabenits-p2" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[node name="Computer" parent="." instance=ExtResource( 9 )]
+visible = false
+offset = Vector2( 510.562, 311.406 )
+transform = Transform2D( 1, 0, 0, 1, 510.562, 311.406 )
+
+[node name="Door" parent="." instance=ExtResource( 6 )]
+visible = false
+
+[node name="Tablet" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[node name="GearBox" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[node name="PlayerGUI" parent="." instance=ExtResource( 8 )]
+
+[node name="Node2D" parent="." instance=ExtResource( 11 )]
+
+[editable path="GearBox"]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://minigames/Escape-room/Escape-room_res/Txtrs/close ups/puzzle 4/powerboxview (UPGR.png" type="Texture" id=1]
+[ext_resource path="res://minigames/Escape-room/scripts/Background.gd" type="Script" id=2]
+[ext_resource path="res://minigames/Escape-room/scripts/Key.gd" type="Script" id=3]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+offset = Vector2( 510.562, 290.142 )
+transform = Transform2D( 1, 0, 0, 1, 510.562, 290.142 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+scale = Vector2( 0.558, 0.558 )
+texture = ExtResource( 1 )
+
+[node name="Key" type="Button" parent="ParallaxLayer"]
+visible = false
+modulate = Color( 0, 1, 0.835294, 0.431373 )
+margin_left = 82.0
+margin_top = 77.0
+margin_right = 115.0
+margin_bottom = 166.0
+script = ExtResource( 3 )
+
+[connection signal="pressed" from="ParallaxLayer/Key" to="ParallaxLayer/Key" method="_on_Key_pressed"]

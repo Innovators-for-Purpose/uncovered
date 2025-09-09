@@ -1,0 +1,28 @@
+diff --git a/scenes/Mainscene/Spatial.tscn b/scenes/Mainscene/Spatial.tscn
+index 423fea7..a5ed6fc 100644
+--- a/scenes/Mainscene/Spatial.tscn
++++ b/scenes/Mainscene/Spatial.tscn
+@@ -114,10 +114,10 @@ transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -51.4,
+ [node name="Door1" type="Spatial" parent="."]
+ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.06532, -22.7066, 6.612, -43.6508 )
+ 
+-[node name="Hallway_Door*" parent="Door1" instance=ExtResource( 29 )]
++[node name="Hallway_Door" parent="Door1" instance=ExtResource( 29 )]
+ transform = Transform( 0.430264, 0, 0, 0, 1, 0, 0, 0, 1.05, 0.200001, 0.524379, 1.38 )
+ 
+-[node name="DialoguePlayer" parent="Door1/Hallway_Door*" instance=ExtResource( 17 )]
++[node name="DialoguePlayer" parent="Door1/Hallway_Door" instance=ExtResource( 17 )]
+ follow_viewport_enable = true
+ dialogue_file = "res://scenes/Charater scenes/Student/jsons/Door tutorial.json"
+ 
+@@ -309,8 +309,8 @@ __meta__ = {
+ [node name="Door I" parent="." instance=ExtResource( 13 )]
+ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.31459, -13.0618, 7.12501, -19.4886 )
+ 
+-[connection signal="body_entered" from="Door1/Hallway_Door*" to="Knob1" method="_on_Hallway_Door_body_entered"]
+-[connection signal="ready" from="Door1/Hallway_Door*/DialoguePlayer" to="Door1/Hallway_Door*/DialoguePlayer" method="_on_Dialogueplayer_ready"]
++[connection signal="body_entered" from="Door1/Hallway_Door" to="Knob1" method="_on_Hallway_Door_body_entered"]
++[connection signal="ready" from="Door1/Hallway_Door/DialoguePlayer" to="Door1/Hallway_Door/DialoguePlayer" method="_on_Dialogueplayer_ready"]
+ [connection signal="body_entered" from="Door1/Area" to="Knob1" method="_on_Area_body_entered"]
+ [connection signal="timeout" from="MCSRevengeTransport/BossBattleTimer" to="MCSRevengeTransport" method="_on_Timer_timeout"]
+ [connection signal="input_event" from="MCSRevengeTransport/CSGSphere/Area" to="MCSRevengeTransport" method="_on_Area_input_event"]

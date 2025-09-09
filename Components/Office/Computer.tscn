@@ -1,0 +1,85 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://minigames/Escape-room/Escape-room_res/Txtrs/close ups/puzzle 2/computer with question.png" type="Texture" id=1]
+[ext_resource path="res://minigames/Escape-room/scripts/Background.gd" type="Script" id=2]
+
+[sub_resource type="ShaderMaterial" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="Shader" id=3]
+code = "shader_type canvas_item;
+const float UPDATE_INTERVAL = .03;
+const float STATIC_GRANULARITY = .02;
+const float EDGE_BLUR = .75;
+const float BORDER_SIZE = .3;
+
+float generate_random_static (in float size, in float interval, in vec2 uv){
+	float time_step = TIME - mod(TIME,interval);
+	vec2 uv_step = uv - mod(uv, size);
+	return fract(sin(dot(uv_step,vec2(12.0278*sin(time_step),15.0905)))*43758.5453);
+}
+
+vec2 get_polar_coords (vec2 center, vec2 uv){
+	vec2 pos = uv-center;
+	float r = length(pos);
+	float theta = atan(pos.y,pos.x);
+	return vec2(r,theta);
+}
+
+vec4 layer (in vec4 front_color, in vec4 back_color){
+	return vec4(mix(back_color.rgb,front_color.rgb,front_color.a),front_color.a+back_color.a);
+}
+
+void fragment() {
+	vec3 static_plot = vec3(generate_random_static(STATIC_GRANULARITY,UPDATE_INTERVAL,UV));
+	
+	vec2 c1 = vec2(0.5);
+	vec2 pv1 = get_polar_coords(c1,UV);
+	float func = BORDER_SIZE-.015*cos(4.0*pv1.y);
+	float border_plot = smoothstep(func,func+EDGE_BLUR, pv1.x);
+	vec4 border_color = vec4(vec3(0.0),0.80)*border_plot;
+	COLOR = vec4(static_plot,.1);
+	COLOR = layer(COLOR,border_color);
+}"
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = SubResource( 3 )
+
+[sub_resource type="Gradient" id=5]
+
+[sub_resource type="GradientTexture2D" id=6]
+gradient = SubResource( 5 )
+fill_to = Vector2( 1, 1 )
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+layer = -50
+offset = Vector2( 510.562, 288.972 )
+transform = Transform2D( 1, 0, 0, 1, 510.562, 288.972 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+material = SubResource( 2 )
+scale = Vector2( 1.126, 1.126 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LineEdit" type="LineEdit" parent="ParallaxLayer"]
+margin_left = -207.0
+margin_top = -112.0
+margin_right = 198.0
+margin_bottom = -88.0
+custom_styles/focus = SubResource( 1 )
+placeholder_text = "type da code..."
+
+[node name="static spooki stuff" type="Sprite" parent="ParallaxLayer"]
+material = SubResource( 4 )
+position = Vector2( -0.0620043, -98.472 )
+scale = Vector2( 6.85938, 3.48438 )
+texture = SubResource( 6 )
+
+[connection signal="text_entered" from="ParallaxLayer/LineEdit" to="ParallaxLayer" method="_on_LineEdit_text_entered"]

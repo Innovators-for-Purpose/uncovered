@@ -1,0 +1,208 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Boss Battle/Boss_.gd" type="Script" id=1]
+[ext_resource path="res://Boss Battle/Camera2D.gd" type="Script" id=2]
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=3]
+[ext_resource path="res://Boss Battle/MCC.png" type="Texture" id=4]
+[ext_resource path="res://maxresdefault.jpg" type="Texture" id=5]
+[ext_resource path="res://Boss Battle/Mentor.png" type="Texture" id=6]
+[ext_resource path="res://Boss Battle/Bosspath_.gd" type="Script" id=7]
+[ext_resource path="res://Boss Battle/Bottom_code.gd" type="Script" id=8]
+[ext_resource path="res://Boss Battle/Player.gd" type="Script" id=9]
+[ext_resource path="res://Boss Battle/BOBEL.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Boss Battle/SEEWERpipos.png" type="Texture" id=11]
+[ext_resource path="res://Boss Battle/Pipe_2.gd" type="Script" id=12]
+[ext_resource path="res://Boss Battle/Pipe3.gd" type="Script" id=13]
+[ext_resource path="res://Boss Battle/Pipe1.gd" type="Script" id=14]
+[ext_resource path="res://Boss Battle/Bossshoot.gd" type="Script" id=15]
+
+[sub_resource type="TileSet" id=1]
+0/name = "maxresdefault.jpg 0"
+0/texture = ExtResource( 5 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( -1, 1, 654, 537 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="SegmentShape2D" id=3]
+b = Vector2( 880, -2 )
+
+[sub_resource type="SegmentShape2D" id=4]
+a = Vector2( 1239, 16 )
+
+[sub_resource type="SegmentShape2D" id=5]
+b = Vector2( 0, 44 )
+
+[sub_resource type="SegmentShape2D" id=6]
+a = Vector2( -29, 4680 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 113.5, 59 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 230.5, 276.5 )
+
+[sub_resource type="Curve2D" id=8]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -557.557, 1256.75, 0, 0, 0, 0, 3688.44, 1264.64, 0, 0, 0, 0, 3716.24, 1716.65, 0, 0, 0, 0, -544.714, 1611.76, 0, 0, 0, 0, -532.573, 1293.76 )
+}
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 155.5, 217.625 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 8, 8 )
+tile_set = SubResource( 1 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0 )
+
+[node name="Top" type="StaticBody2D" parent="."]
+position = Vector2( -252, 372 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="top" type="CollisionShape2D" parent="Top"]
+scale = Vector2( 100, 10 )
+shape = SubResource( 3 )
+
+[node name="Bottom" type="StaticBody2D" parent="."]
+position = Vector2( -439, 3857 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bottom"]
+
+[node name="bottom2" type="CollisionShape2D" parent="Bottom/Area2D"]
+position = Vector2( 0, -2 )
+scale = Vector2( 100, 10 )
+shape = SubResource( 4 )
+
+[node name="bottom" type="CollisionShape2D" parent="Bottom"]
+scale = Vector2( 100, 10 )
+shape = SubResource( 4 )
+
+[node name="Left" type="StaticBody2D" parent="."]
+position = Vector2( 93, 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="left" type="CollisionShape2D" parent="Left"]
+scale = Vector2( 100, 100 )
+shape = SubResource( 5 )
+
+[node name="Right" type="StaticBody2D" parent="."]
+position = Vector2( 4947, -187 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="right" type="CollisionShape2D" parent="Right"]
+shape = SubResource( 6 )
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 1922, 2641 )
+
+[node name="MC_body" type="KinematicBody2D" parent="Node2D"]
+position = Vector2( 580, -20 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MC gun shape" type="CollisionShape2D" parent="Node2D/MC_body"]
+position = Vector2( 270.5, -95 )
+shape = SubResource( 9 )
+
+[node name="MCshape" type="CollisionShape2D" parent="Node2D/MC_body"]
+position = Vector2( -71.5001, 21.5 )
+shape = SubResource( 2 )
+
+[node name="MainCharacter" type="Sprite" parent="Node2D/MC_body"]
+scale = Vector2( 1.76786, 1.43805 )
+texture = ExtResource( 4 )
+script = ExtResource( 9 )
+
+[node name="Camera2D" type="Camera2D" parent="Node2D/MC_body"]
+current = true
+zoom = Vector2( 10, 10 )
+script = ExtResource( 2 )
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2( 976, 7 )
+rotation = -0.000443217
+curve = SubResource( 8 )
+script = ExtResource( 7 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( -557.557, 1256.75 )
+rotation = -0.33204
+rotate = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Boss" type="KinematicBody2D" parent="Path2D/PathFollow2D"]
+position = Vector2( -38.4282, -14.3271 )
+rotation = 0.332483
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Bossskin" type="Sprite" parent="Path2D/PathFollow2D/Boss"]
+texture = ExtResource( 6 )
+script = ExtResource( 15 )
+
+[node name="Boss_shape" type="CollisionShape2D" parent="Path2D/PathFollow2D/Boss"]
+shape = SubResource( 7 )
+
+[node name="Position2D" type="Position2D" parent="Path2D/PathFollow2D/Boss/Boss_shape"]
+position = Vector2( -1163, -1087 )
+scale = Vector2( 100, 100 )
+
+[node name="MATH" parent="." instance=ExtResource( 10 )]
+position = Vector2( 702, 2504 )
+
+[node name="Node2D" type="RichTextLabel" parent="MATH"]
+margin_left = -220.0
+margin_top = -111.0
+margin_right = -190.0
+margin_bottom = -78.0
+rect_scale = Vector2( 18.3785, 18.2388 )
+custom_colors/default_color = Color( 0.839216, 0.0627451, 0.0627451, 1 )
+text = "9+7
+"
+
+[node name="Pipe1" type="Sprite" parent="."]
+position = Vector2( 2623, 802 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 11 )
+script = ExtResource( 14 )
+
+[node name="Pipe2" type="Sprite" parent="."]
+position = Vector2( 3966, 787 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 11 )
+script = ExtResource( 12 )
+
+[node name="Pipe3" type="Sprite" parent="."]
+position = Vector2( 1247, 786 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 11 )
+script = ExtResource( 13 )
+
+[connection signal="body_entered" from="Bottom/Area2D" to="Bottom" method="_on_Area2D_body_entered"]

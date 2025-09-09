@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Boss Battle/BUUUUBEL.png" type="Texture" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 5.4878
+
+[node name="Node2D" type="Node2D"]
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+scale = Vector2( 10000, 10000 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( 28, 320 )
+scale = Vector2( 100, 100 )
+texture = ExtResource( 1 )

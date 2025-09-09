@@ -1,0 +1,19 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/Untitled_Artwork 34.png-9c5e2a410c13a3c1e15f64b80fb71e09.res"
+group_file="res://minigames/Escape-room/Escape-room_res/Txtrs/Atlas/CodeShapes.png"
+valid=true
+[deps]
+
+
+source_file="res://minigames/Escape-room/Escape-room_res/Txtrs/close ups/puzzle 2/numbers and shapes/Untitled_Artwork 34.png"
+dest_files=[ "res://.import/Untitled_Artwork 34.png-9c5e2a410c13a3c1e15f64b80fb71e09.res" ]
+
+[params]
+
+atlas_file="res://minigames/Escape-room/Escape-room_res/Txtrs/Atlas/CodeShapes.png"
+import_mode=0
+crop_to_region=false
+trim_alpha_border_from_region=true

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/objectsall/Large objects/Door/.mesh" type="ArrayMesh" id=1]
+
+[node name="Door_1" type="Spatial"]
+
+[node name="RootNode" type="Spatial" parent="."]
+
+[node name="Cube154" type="MeshInstance" parent="RootNode"]
+transform = Transform( 0.14263, 93.8504, 0.000186225, -2.55946e-07, -0.000134273, 127.524, 8.58694, -1.55887, 0, 0, 0, 1.90735e-06 )
+mesh = ExtResource( 1 )

@@ -1,0 +1,199 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://adnan/WelcomeText.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/Cairo/new_dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Components/Control_1.gd" type="Script" id=4]
+[ext_resource path="res://Components/Welcome/L,Gray_text_box_with_dots_Left.png" type="Texture" id=5]
+[ext_resource path="res://Components/Welcome/Gray_text_box.png" type="Texture" id=6]
+[ext_resource path="res://Components/Welcome/R,Gray_text_box_with_dots_Right.svg" type="Texture" id=7]
+[ext_resource path="res://Components/Welcome/Green_text_BoxIII.svg" type="Texture" id=8]
+[ext_resource path="res://assets/fonts/battlenet/new_dynamicfont.tres" type="DynamicFont" id=9]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 1, 1, 1, 1 )
+
+[node name="Welcome" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="WelcomeTimer" type="Timer" parent="."]
+wait_time = 3.5
+autostart = true
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Instructions" type="MarginContainer" parent="Node2D"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.0
+margin_top = 96.0
+margin_right = 608.0
+margin_bottom = 546.0
+custom_constants/margin_right = 15
+custom_constants/margin_top = 15
+custom_constants/margin_left = 15
+custom_constants/margin_bottom = 15
+
+[node name="Panel" type="Panel" parent="Node2D/Instructions"]
+self_modulate = Color( 0.972549, 0.972549, 0.972549, 1 )
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 595.0
+margin_bottom = 435.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="Node2D/Instructions"]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 595.0
+margin_bottom = 435.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Node2D/Instructions/MarginContainer"]
+margin_right = 580.0
+margin_bottom = 420.0
+alignment = 1
+
+[node name="Label" type="Label" parent="Node2D/Instructions/MarginContainer/HBoxContainer"]
+margin_left = 63.0
+margin_top = 29.0
+margin_right = 517.0
+margin_bottom = 390.0
+custom_fonts/font = ExtResource( 2 )
+text = "Welcome to iFp's first game: Uncover!
+
+Walk around with the letters WASD
+on your keyboard.
+
+Press T to close messages.
+
+Press Q to release your mouse pointer.
+
+If you reach the end of a path in the game, just close
+and start over.
+
+... and don't be afraid to walk through a door or two  :)
+(avoid walls though)"
+
+[node name="Control_1" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 4 )
+
+[node name="Background" type="Panel" parent="Control_1"]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="Panel" type="Panel" parent="Control_1"]
+margin_left = 135.0
+margin_top = 15.0
+margin_right = 1023.0
+margin_bottom = 217.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel"]
+margin_right = 884.0
+margin_bottom = 174.0
+rect_rotation = -0.0709854
+texture = ExtResource( 8 )
+region_rect = Rect2( -1027.25, 0, 4533.08, 1378.64 )
+
+[node name="Label" type="Label" parent="Control_1/Panel"]
+margin_left = 228.0
+margin_top = 23.0
+margin_right = 836.0
+margin_bottom = 146.0
+custom_fonts/font = ExtResource( 9 )
+text = "Welcome to  uncover, if you want to skip text press T"
+autowrap = true
+clip_text = true
+
+[node name="Panel2" type="Panel" parent="Control_1"]
+margin_left = 8.0
+margin_top = 236.0
+margin_right = 921.0
+margin_bottom = 393.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel2"]
+margin_top = -28.0
+margin_right = 779.0
+margin_bottom = 139.0
+texture = ExtResource( 6 )
+region_rect = Rect2( 1.24512, 0, 15806.4, 4496.51 )
+
+[node name="Label" type="Label" parent="Control_1/Panel2"]
+margin_left = 41.0
+margin_top = -11.0
+margin_right = 749.0
+margin_bottom = 114.0
+custom_fonts/font = ExtResource( 9 )
+text = "Otherwise our game has a bunch of minigames instore for others to explore."
+autowrap = true
+clip_text = true
+
+[node name="Panel3" type="Panel" parent="Control_1"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1/Panel3"]
+margin_left = 132.0
+margin_top = 391.0
+margin_right = 1018.0
+margin_bottom = 587.0
+size_flags_vertical = 4
+texture = ExtResource( 8 )
+region_rect = Rect2( -981.553, 0, 4459.32, 1374.72 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="Control_1/Panel3"]
+margin_left = 368.0
+margin_top = 427.0
+margin_right = 976.0
+margin_bottom = 552.0
+custom_fonts/font = ExtResource( 9 )
+text = "Have fun!"
+autowrap = true
+clip_text = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control_1"]
+margin_left = 630.0
+margin_top = 55.0
+margin_right = 833.0
+margin_bottom = 139.0
+rect_pivot_offset = Vector2( -325, 257 )
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 3473.16, 1639.47 )
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="Control_1"]
+margin_left = 268.0
+margin_top = 247.0
+margin_right = 471.0
+margin_bottom = 331.0
+rect_pivot_offset = Vector2( -325, 257 )
+texture = ExtResource( 5 )
+region_rect = Rect2( -26.9524, 0, 3443.58, 1444.87 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="Control_1"]
+margin_left = 617.0
+margin_top = 446.0
+margin_right = 820.0
+margin_bottom = 530.0
+rect_pivot_offset = Vector2( -325, 257 )
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 3473.16, 1639.47 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[connection signal="timeout" from="WelcomeTimer" to="Control_1" method="_on_WelcomeTimer_timeout"]
